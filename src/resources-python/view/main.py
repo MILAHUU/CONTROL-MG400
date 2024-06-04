@@ -1,5 +1,5 @@
 import threading
-from dobot_api import DobotApiDashboard, DobotApi, DobotApiMove, MyType,alarmAlarmJsonFile
+from Api.dobot_api import DobotApiDashboard, DobotApi, DobotApiMove, MyType,alarmAlarmJsonFile
 from time import sleep
 import numpy as np
 import re

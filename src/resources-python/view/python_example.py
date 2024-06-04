@@ -1,6 +1,6 @@
 import cmd
 import threading
-from dobot_api import DobotApiDashboard, DobotApiMove, DobotApi
+from Api.dobot_api import DobotApiDashboard, DobotApiMove, DobotApi
 from time import sleep
 
 class RobotController(cmd.Cmd):
