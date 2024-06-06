@@ -1,5 +1,5 @@
-
 import os, sys
+
 # ---------copiar estas lineas de codigo en caso de marcar error en las importaciones----------
 # Obtener la ruta del directorio actual del script
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -7,7 +7,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(script_dir)
 # Agregar la ruta del proyecto al PYTHONPATH
 sys.path.append(project_dir)
-# ---------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------
 
 from threading import Thread
 import time
@@ -16,8 +16,8 @@ from tkinter import ttk, messagebox
 from tkinter.scrolledtext import ScrolledText
 from Api.dobot_api import *
 import json
-from files.alarm_controller import alarm_controller_list # type: ignore
-from files.alarm_servo import alarm_servo_list # type: ignore
+from files.alarm_servo import alarm_servo_list
+from files.alarm_controller import alarm_controller_list
 
 LABEL_JOINT = [["J1-", "J2-", "J3-", "J4-"],
                ["J1:", "J2:", "J3:", "J4:"],
