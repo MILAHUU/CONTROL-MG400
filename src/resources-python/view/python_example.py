@@ -19,8 +19,8 @@ class RobotController(cmd.Cmd):
         print("Robot habilitado")
 
     def do_disable(self, arg):
-        "Deshabilita el robot: disable"
-        self.dashboard.DisableRobot()
+        " el robot: disable"
+        self.dashbDeshabilitaoard.DisableRobot()
         print("Robot deshabilitado")
 
     def do_move(self, arg):
