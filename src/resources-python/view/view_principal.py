@@ -146,4 +146,99 @@ class RobotUI(object):
                         rely=0.55, x=350, command=self.confirm_do)
 
         #Funciones de moviento
-         
+        self.frame_move = LabelFrame(self.root, text="Move Function", labelanchor="nw",
+                                     bg="#FFFFFF", width=870, pady=10, height=130, border=2)
+
+        self.set_move(text="X:", label_value=10,
+                      default_value="600", entry_value=40, rely=0.1, master=self.frame_move)
+        self.set_move(text="Y:", label_value=110,
+                      default_value="-260", entry_value=140, rely=0.1, master=self.frame_move)
+        self.set_move(text="Z:", label_value=210,
+                      default_value="380", entry_value=240, rely=0.1, master=self.frame_move)
+        self.set_move(text="R:", label_value=310,
+                      default_value="170", entry_value=340, rely=0.1, master=self.frame_move)
+
+        self.set_button(master=self.frame_move, text="MovJ",
+                        rely=0.05, x=410, command=self.movj)
+        self.set_button(master=self.frame_move, text="MovL",
+                        rely=0.05, x=500, command=self.movl)
+        
+        self.set_move(text="J1:", label_value=10,
+                      default_value="0", entry_value=40, rely=0.5, master=self.frame_move)
+        self.set_move(text="J2:", label_value=110,
+                      default_value="-20", entry_value=140, rely=0.5, master=self.frame_move)
+        self.set_move(text="J3:", label_value=210,
+                      default_value="-80", entry_value=240, rely=0.5, master=self.frame_move)
+        self.set_move(text="J4:", label_value=310,
+                      default_value="30", entry_value=340, rely=0.5, master=self.frame_move)
+
+        self.set_button(master=self.frame_move,
+                        text="JointMovJ", rely=0.45, x=410, command=self.joint_movj)
+        
+        self.frame_feed_log = Frame(
+            self.root, bg="#FFFFFF", width=870, pady=10, height=400, border=2)
+        # Retroalimentacion del robot 
+        self.frame_feed = LabelFrame(self.frame_feed_log, text="Feedback", labelanchor="nw",
+                                     bg="#FFFFFF", width=550, height=150)
+
+        self.frame_feed.place(relx=0, rely=0, relheight=1)
+
+        # Relación de velocidad actual
+        self.set_label(self.frame_feed,
+                       text="Current Speed Ratio:", rely=0.05, x=10)
+        self.label_feed_speed = self.set_label(
+            self.frame_feed, "", rely=0.05, x=145)
+        self.set_label(self.frame_feed, text="%", rely=0.05, x=175)
+
+        # Modo Robot
+        self.set_label(self.frame_feed, text="Robot Mode:", rely=0.1, x=10)
+        self.label_robot_mode = self.set_label(
+            self.frame_feed, "", rely=0.1, x=95)
+
+        # Trota y obtén coordenadas
+        self.label_feed_dict = {}
+        self.set_feed(LABEL_JOINT, 9, 52, 74, 117)
+        self.set_feed(LABEL_COORD, 165, 209, 231, 272)
+
+        # Digitial I/O
+        self.set_label(self.frame_feed, "Digital Inputs:", rely=0.8, x=11)
+        self.label_di_input = self.set_label(
+            self.frame_feed, "", rely=0.8, x=100)
+        self.set_label(self.frame_feed, "Digital Outputs:", rely=0.85, x=10)
+        self.label_di_output = self.set_label(
+            self.frame_feed, "", rely=0.85, x=100)
+
+        # Información de error
+        self.frame_err = LabelFrame(self.frame_feed, text="Error Info", labelanchor="nw",
+                                    bg="#FFFFFF", width=180, height=50)
+        self.frame_err.place(relx=0.65, rely=0, relheight=0.7)
+
+        self.text_err = ScrolledText(
+            self.frame_err, width=170, height=50, relief="flat")
+        self.text_err.place(rely=0, relx=0, relheight=0.7, relwidth=1)
+
+        self.set_button(self.frame_feed, "Clear", rely=0.71,
+                        x=487, command=self.clear_error_info)
+
+        # Registro
+        self.frame_log = LabelFrame(self.frame_feed_log, text="Log", labelanchor="nw",
+                                    bg="#FFFFFF", width=300, height=150)
+        self.frame_log.place(relx=0.65, rely=0, relheight=1)
+
+        self.text_log = ScrolledText(
+            self.frame_log, width=270, height=140, relief="flat")
+        self.text_log.place(rely=0, relx=0, relheight=1, relwidth=1)
+
+        # Cliente inicial
+        self.client_dash = None
+        self.client_move = None
+        self.client_feed = None
+
+        self.alarm_controller_dict = self.convert_dict(alarm_controller_list)
+        self.alarm_servo_dict = self.convert_dict(alarm_servo_list)
+
+    def convert_dict(self, alarm_list):
+        alarm_dict = {}
+        for i in alarm_list:
+            alarm_dict[i["id"]] = i
+        return alarm_dict
