@@ -7,7 +7,7 @@ alarm_servo_list = [
             "description" : "No error",
             "cause" : "",
             "solution" : ""
-        },
+        }
     },
     {
         "id": 25376,
@@ -16,7 +16,7 @@ alarm_servo_list = [
             "description" : "Anomalías en los parámetros internos del servomotor",
             "cause" : "1.Caída instantánea del voltaje de la fuente de alimentación 2.Se actualizó el software 3.Falla del servodrive",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 21120,
@@ -25,7 +25,7 @@ alarm_servo_list = [
             "description" : "Programmable logic configuration faults",
             "cause" : "1.Incompatibilidad entre las versiones del software de FPGA y MCU 2.Falla en la FPGA",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 29953,
@@ -34,7 +34,7 @@ alarm_servo_list = [
             "description" : "FPGA software version too low",
             "cause" : "",
             "solution" : "Please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 29954,
@@ -43,7 +43,7 @@ alarm_servo_list = [
             "description" : "Programmable logic interrupt fault",
             "cause" : "1.Falla en la FPGA 2.Anomalía en el handshake de comunicación entre FPGA y MCU 3.Tiempo de cálculo interno del controlador excedido",
             "solution" : "If connecting the power for many times, the alarm is still reported, please replace the drive"
-        },
+        }
     },
     {
         "id": 25377,
@@ -52,7 +52,7 @@ alarm_servo_list = [
             "description" : "Internal program exceptions",
             "cause" : "1.Falla en la EEPROM 2.Falla en el servodrive",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 21808,
@@ -61,7 +61,7 @@ alarm_servo_list = [
             "description" : "Parameter storage failure",
             "cause" : "1.Anomalía durante la escritura de parámetros 2.Anomalía durante la lectura de parámetros",
             "solution" : "Reset the parameter and power on again, or please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 28962,
@@ -70,7 +70,7 @@ alarm_servo_list = [
             "description" : "Product matching faults",
             "cause" : "1.El número de serie del producto (motor o controlador) no existe 2.Incompatibilidad en el nivel de potencia entre el motor y el controlador",
             "solution" : "1. Check whether the motor parameter matches the motor model in nameplate; 2.Check whether the motor and driver match, otherwise, select the right motor and driver"
-        },
+        }
     },
     {
         "id": 21574,
@@ -79,7 +79,7 @@ alarm_servo_list = [
             "description" : "Invalid servo ON command fault",
             "cause" : "",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 28964,
@@ -88,7 +88,7 @@ alarm_servo_list = [
             "description" : "Absolute position mode product matching fault",
             "cause" : "",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 25378,
@@ -97,7 +97,7 @@ alarm_servo_list = [
             "description" : "Repeated assignment of DI functions",
             "cause" : "1.Al asignar funciones DI, la misma función se asigna repetidamente a varios terminales DI 2.El número de función DI excede la cantidad de funciones DI disponibles 3.La función DI no es compatible",
             "solution" : "1. Check whether  the same function is assigned to different DI's; 2. Confirm whether the corresponding MCU supports the assigned functionality"
-        },
+        }
     },
     {
         "id": 25379,
@@ -106,7 +106,7 @@ alarm_servo_list = [
             "description" : "DO function allocation overrun",
             "cause" : "1.Anomalía en el controlador 2.Contacto deficiente o desconexión del cable de comunicación 3.El cable de comunicación no está conectado a tierra o la conexión a tierra es deficiente",
             "solution" : "Check whether the motor and circuit are working properly, or contact technical support engineer"
-        },
+        }
     },
     {
         "id": 29488,
@@ -115,7 +115,7 @@ alarm_servo_list = [
             "description" : "Data in the motor encoder ROM is incorrectly checked or parameters are not stored",
             "cause" : "",
             "solution" : "系统错误，请联系技术支持工程师"
-        },
+        }
     },
     {
         "id": 8752,
@@ -138,7 +138,7 @@ alarm_servo_list = [
             "description" : "DQ axis current overflow fault",
             "cause" : "",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 65288,
@@ -147,7 +147,7 @@ alarm_servo_list = [
             "description" : "FPGA system sampling operation timeout",
             "cause" : "",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 9024,
@@ -156,7 +156,7 @@ alarm_servo_list = [
             "description" : "Output shorted to ground",
             "cause" : "1.Cortocircuito a tierra en los cables de potencia del controlador (U V W) 2.Cortocircuito a tierra en el motor 3.Falla en el controlador",
             "solution" : "Please contact technical support engineer"
-        },
+        }
     },
     {
         "id": 13184,
@@ -188,7 +188,7 @@ alarm_servo_list = [
             "description" : "Electrical over-voltage in the main circuit",
             "cause" : "1.Nivel de voltaje de entrada incorrecto 2.Falla en la resistencia de frenado 3.Resistencia de frenado demasiado grande, la velocidad de absorción de energía es demasiado lenta",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
         {
         "id": 12832,
@@ -197,6 +197,6 @@ alarm_servo_list = [
             "description" : "Main circuit voltage undervoltage",
             "cause" : "1.Voltaje de entrada de la fuente de alimentación inestable o pérdida de energía 2.Caída de voltaje significativa durante una aceleración brusca 3.Falla en el servodrive",
             "solution" : "System error, please contact technical support engineer"
-        },
+        }
     },
 ]
