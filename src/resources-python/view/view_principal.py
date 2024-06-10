@@ -242,3 +242,86 @@ class RobotUI(object):
         for i in alarm_list:
             alarm_dict[i["id"]] = i
         return alarm_dict
+    
+    def read_file(self, path):
+        with open(path, "r", encoding="utf8") as fp:
+            json_data = json.load(fp)
+        return json_data
+    
+    def mainloop(self):
+        self.root.mainloop()
+
+    def pack(self):
+        self.frame_robot.pack()
+        self.frame_dashboard.pack()
+        self.frame_move.pack()
+        self.frame_feed_log.pack()
+
+    def set_move(self, text, label_value, default_value, entry_value, rely, master):
+        self.label = Label(master, text=text)
+        self.label.place(rely=rely, x=label_value)
+        value = StringVar(self.root, value=default_value)
+        self.entry_temp = Entry(master, width=6, textvariable=value)
+        self.entry_temp.place(rely=rely, x=entry_value)
+        self.entry_dict[text] = self.entry_temp
+
+    def move_jog(self, text):
+        if self.global_state["connect"]:
+            self.client_move.MoveJog(text)
+
+    def move_stop(self, event):
+        if self.global_state["connect"]:
+            self.client_move.MoveJog("")
+
+    def set_button(self, master, text, rely, x, **kargs):
+        self.button = Button(master, text=text, padx=5,
+                             command=kargs["command"])
+        self.button.place(rely=rely, x=x)
+
+        if text != "Connect":
+            self.button["state"] = "disable"
+            self.button_list.append(self.button)
+        return self.button
+    
+    def set_label(self, master, text, rely, x):
+        self.label = Label(master, text=text)
+        self.label.place(rely=rely, x=x)
+        return self.label
+    
+    def connect_port(self):
+        if self.global_state["connect"]:
+            print("Desconexión exitosa")
+            self.client_dash.close()
+            self.client_feed.close()
+            self.client_move.close()
+            self.client_dash = None
+            self.client_feed = None
+            self.client_move = None
+
+            for i in self.button_list:
+                i["state"] = "disable"
+            self.button_connect["text"] = "Connect"
+        else:
+            try:
+                print("La conexión se ha realizado correctamente")
+                self.client_dash = DobotApiDashboard(
+                    self.entry_ip.get(), int(self.entry_dash.get()), self.text_log)
+                self.client_move = DobotApiMove(
+                    self.entry_ip.get(), int(self.entry_move.get()), self.text_log)
+                self.client_feed = DobotApi(
+                    self.entry_ip.get(), int(self.entry_feed.get()), self.text_log)
+            except Exception as e:
+                messagebox.showerror("Attention!", f"Connection Error:{e}")
+                return
+            
+            for i in self.button_list:
+                i["state"] = "normal"
+            self.button_connect["text"] = "Disconnect"
+        self.global_state["connect"] = not self.global_state["connect"]
+        self.set_feed_back()
+
+    def set_feed_back(self):
+        if self.global_state["connect"]:
+            thread = Thread(target=self.feed_back)
+            thread.setDaemon(True)
+            thread.start()
