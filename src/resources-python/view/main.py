@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 3f43de7fa3309937135204ce3ebc41fd07c47534
 import os, sys
 # ---------copiar estas lineas de codigo en caso de marcar error en las importaciones----------
 # Obtener la ruta del directorio actual del script
@@ -12,11 +8,6 @@ project_dir = os.path.dirname(script_dir)
 sys.path.append(project_dir)
 # ---------------------------------------------------------------------------------------------
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 3f43de7fa3309937135204ce3ebc41fd07c47534
 import threading
 from Api.dobot_api import DobotApiDashboard, DobotApi, DobotApiMove, MyType,alarmAlarmJsonFile
 from time import sleep
