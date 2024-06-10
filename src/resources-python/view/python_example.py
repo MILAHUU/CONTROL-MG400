@@ -1,5 +1,4 @@
 import cmd
-import threading
 from Api.dobot_api import DobotApiDashboard, DobotApiMove, DobotApi
 from time import sleep
 
@@ -15,13 +14,19 @@ class RobotController(cmd.Cmd):
 
     def do_enable(self, arg):
         "Habilita el robot: enable"
-        self.dashboard.EnableRobot()
-        print("Robot habilitado")
+        try:
+            self.dashboard.EnableRobot()
+            print("Robot habilitado")
+        except Exception as e:
+            print(f"Error al habilitar el robot: {e}")
 
     def do_disable(self, arg):
-        " el robot: disable"
-        self.dashbDeshabilitaoard.DisableRobot()
-        print("Robot deshabilitado")
+        "Deshabilita el robot: disable"
+        try:
+            self.dashboard.DisableRobot()
+            print("Robot deshabilitado")
+        except Exception as e:
+            print(f"Error al deshabilitar el robot: {e}")
 
     def do_move(self, arg):
         "Mueve el robot a una posición especificada: move x y z r"
@@ -35,6 +40,8 @@ class RobotController(cmd.Cmd):
             print(f"Moviendo el robot a la posición x={x}, y={y}, z={z}, r={r}")
         except ValueError:
             print("Error: Todos los parámetros deben ser números")
+        except Exception as e:
+            print(f"Error al mover el robot: {e}")
 
     def do_movej(self, arg):
         "Mueve el robot a una posición especificada usando joints: movej j1 j2 j3 j4"
@@ -48,6 +55,8 @@ class RobotController(cmd.Cmd):
             print(f"Moviendo el robot a las posiciones de joints j1={j1}, j2={j2}, j3={j3}, j4={j4}")
         except ValueError:
             print("Error: Todos los parámetros deben ser números")
+        except Exception as e:
+            print(f"Error al mover el robot: {e}")
 
     def do_set_speed(self, arg):
         "Configura la velocidad de movimiento del robot: set_speed speed"
@@ -57,6 +66,8 @@ class RobotController(cmd.Cmd):
             print(f"Velocidad configurada a {speed}")
         except ValueError:
             print("Error: El parámetro debe ser un número")
+        except Exception as e:
+            print(f"Error al configurar la velocidad: {e}")
 
     def do_set_acceleration(self, arg):
         "Configura la aceleración del robot: set_acceleration acceleration"
@@ -66,6 +77,8 @@ class RobotController(cmd.Cmd):
             print(f"Aceleración configurada a {acceleration}")
         except ValueError:
             print("Error: El parámetro debe ser un número")
+        except Exception as e:
+            print(f"Error al configurar la aceleración: {e}")
 
     def do_circle(self, arg):
         "Realiza un movimiento circular: circle x1 y1 z1 r1 x2 y2 z2 r2"
@@ -79,6 +92,8 @@ class RobotController(cmd.Cmd):
             print(f"Moviendo el robot en un círculo desde ({x1}, {y1}, {z1}, {r1}) hasta ({x2}, {y2}, {z2}, {r2})")
         except ValueError:
             print("Error: Todos los parámetros deben ser números")
+        except Exception as e:
+            print(f"Error al realizar el movimiento circular: {e}")
 
     def do_set_do(self, arg):
         "Configura una salida digital: set_do index status"
@@ -92,11 +107,16 @@ class RobotController(cmd.Cmd):
             print(f"Salida digital {index} configurada a {status}")
         except ValueError:
             print("Error: Ambos parámetros deben ser números enteros")
+        except Exception as e:
+            print(f"Error al configurar la salida digital: {e}")
 
     def do_get_position(self, arg):
         "Obtiene la posición actual del robot: get_position"
-        position = self.dashboard.GetFeed()
-        print(f"Posición actual: {position}")
+        try:
+            position = self.dashboard.GetFeed()
+            print(f"Posición actual: {position}")
+        except Exception as e:
+            print(f"Error al obtener la posición del robot: {e}")
 
     def do_exit(self, arg):
         "Sale de la interfaz de control del robot: exit"
