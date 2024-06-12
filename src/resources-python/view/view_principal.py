@@ -41,26 +41,31 @@ LABEL_ROBOT_MODE = {
     11:	"ROBOT_MODE_JOG"
 }
 
+
 class RobotUI(object):
 
-    def __ini__(self):
+    def __init__(self):
         self.root = Tk()
-        self.root.title("MG400/M1Pro python demo")
+        self.root.title("Control de MG400/M1Pro")
+        # fixed window size
         self.root.geometry("900x850")
-        #self.root.iconbitmap("imagenes/robot.ico")
+        # set window icon
+        # self.root.iconbitmap("images/robot.ico")
 
-
+        # global state dict
         self.global_state = {}
 
+        # all button(todos los botones)
         self.button_list = []
 
+        # all entry(todas las entradas)
         self.entry_dict = {}
 
-        #conexion al robot
+        # Robot Connect(conexion al robot)
         self.frame_robot = LabelFrame(self.root, text="Robot Connect",
                                       labelanchor="nw", bg="#FFFFFF", width=870, height=120, border=2)
-        
-        self.label_ip = Label(self.frame_robot, text="IP Adress:")
+
+        self.label_ip = Label(self.frame_robot, text="IP Address:")
         self.label_ip.place(rely=0.2, x=10)
         ip_port = StringVar(self.root, value="192.168.1.6")
         self.entry_ip = Entry(self.frame_robot, width=12, textvariable=ip_port)
@@ -76,10 +81,10 @@ class RobotUI(object):
         self.label_move = Label(self.frame_robot, text="Move Port:")
         self.label_move.place(rely=0.2, x=400)
         move_port = IntVar(self.root, value=30003)
-        self.entry_feed = Entry(
+        self.entry_move = Entry(
             self.frame_robot, width=7, textvariable=move_port)
-        self.entry_dash.place(rely=0.2, x=480)
-        
+        self.entry_move.place(rely=0.2, x=480)
+
         self.label_feed = Label(self.frame_robot, text="Feedback Port:")
         self.label_feed.place(rely=0.2, x=580)
         feed_port = IntVar(self.root, value=30004)
@@ -87,29 +92,29 @@ class RobotUI(object):
             self.frame_robot, width=7, textvariable=feed_port)
         self.entry_feed.place(rely=0.2, x=680)
 
-        #Conectar y desconectar
+        # Conectar y desconectar
         self.button_connect = self.set_button(master=self.frame_robot,
                                               text="Connect", rely=0.6, x=630, command=self.connect_port)
         self.button_connect["width"] = 10
         self.global_state["connect"] = False
 
-        #Funcion del dashboard
+        # Funcion del dashboard)
         self.frame_dashboard = LabelFrame(self.root, text="Dashboard Function",
                                           labelanchor="nw", bg="#FFFFFF", pady=10, width=870, height=120, border=2)
 
-        #Habilitar y desabilitar
+        # Habilitar y desabilitar
         self.button_enable = self.set_button(master=self.frame_dashboard,
                                              text="Enable", rely=0.1, x=10, command=self.enable)
         self.button_enable["width"] = 7
         self.global_state["enable"] = False
 
-        #Restablecer el robot/borras errores
+        # Restablecer robot / Borrar error
         self.set_button(master=self.frame_dashboard,
                         text="Reset Robot", rely=0.1, x=145, command=self.reset_robot)
         self.set_button(master=self.frame_dashboard,
                         text="Clear Error", rely=0.1, x=290, command=self.clear_error)
-        
-        #Relacion de la velocidad
+
+        # Relación de velocidad
         self.label_speed = Label(self.frame_dashboard, text="Speed Ratio:")
         self.label_speed.place(rely=0.1, x=430)
 
@@ -123,7 +128,7 @@ class RobotUI(object):
         self.set_button(master=self.frame_dashboard,
                         text="Confirm", rely=0.1, x=586, command=self.confirm_speed)
 
-        #Salidas digitales
+        # DO:Salidas digitales
         self.label_digitial = Label(
             self.frame_dashboard, text="Digital Outputs: Index:")
         self.label_digitial.place(rely=0.55, x=10)
@@ -145,7 +150,7 @@ class RobotUI(object):
         self.set_button(self.frame_dashboard, "Confirm",
                         rely=0.55, x=350, command=self.confirm_do)
 
-        #Funciones de moviento
+        #Función de movimiento
         self.frame_move = LabelFrame(self.root, text="Move Function", labelanchor="nw",
                                      bg="#FFFFFF", width=870, pady=10, height=130, border=2)
 
@@ -162,7 +167,7 @@ class RobotUI(object):
                         rely=0.05, x=410, command=self.movj)
         self.set_button(master=self.frame_move, text="MovL",
                         rely=0.05, x=500, command=self.movl)
-        
+
         self.set_move(text="J1:", label_value=10,
                       default_value="0", entry_value=40, rely=0.5, master=self.frame_move)
         self.set_move(text="J2:", label_value=110,
@@ -174,10 +179,10 @@ class RobotUI(object):
 
         self.set_button(master=self.frame_move,
                         text="JointMovJ", rely=0.45, x=410, command=self.joint_movj)
-        
+
         self.frame_feed_log = Frame(
             self.root, bg="#FFFFFF", width=870, pady=10, height=400, border=2)
-        # Retroalimentacion del robot 
+        # Feedback
         self.frame_feed = LabelFrame(self.frame_feed_log, text="Feedback", labelanchor="nw",
                                      bg="#FFFFFF", width=550, height=150)
 
@@ -242,12 +247,15 @@ class RobotUI(object):
         for i in alarm_list:
             alarm_dict[i["id"]] = i
         return alarm_dict
-    
+
     def read_file(self, path):
+        #Se tarda mucho tiempo en leer el archivo JSON, por lo que puede optar por mantener dos variables
+        # alarm_controller_list alarm_servo_list
+        # self.read_file("files/alarm_controller.json")
         with open(path, "r", encoding="utf8") as fp:
             json_data = json.load(fp)
         return json_data
-    
+
     def mainloop(self):
         self.root.mainloop()
 
@@ -282,12 +290,24 @@ class RobotUI(object):
             self.button["state"] = "disable"
             self.button_list.append(self.button)
         return self.button
-    
+
+    def set_button_bind(self, master, text, rely, x, **kargs):
+        self.button = Button(master, text=text, padx=5)
+        self.button.bind("<ButtonPress-1>",
+                         lambda event: self.move_jog(text=text))
+        self.button.bind("<ButtonRelease-1>", self.move_stop)
+        self.button.place(rely=rely, x=x)
+
+        if text != "Connect":
+            self.button["state"] = "disable"
+            self.button_list.append(self.button)
+        return self.button
+
     def set_label(self, master, text, rely, x):
         self.label = Label(master, text=text)
         self.label.place(rely=rely, x=x)
         return self.label
-    
+
     def connect_port(self):
         if self.global_state["connect"]:
             print("Desconexión exitosa")
@@ -313,7 +333,7 @@ class RobotUI(object):
             except Exception as e:
                 messagebox.showerror("Attention!", f"Connection Error:{e}")
                 return
-            
+
             for i in self.button_list:
                 i["state"] = "normal"
             self.button_connect["text"] = "Disconnect"
@@ -325,3 +345,153 @@ class RobotUI(object):
             thread = Thread(target=self.feed_back)
             thread.setDaemon(True)
             thread.start()
+
+    def enable(self):
+        if self.global_state["enable"]:
+            self.client_dash.DisableRobot()
+            self.button_enable["text"] = "Enable"
+        else:
+            self.client_dash.EnableRobot()
+            # if need time sleep
+            # time.sleep(0.5)
+            self.button_enable["text"] = "Disable"
+
+        self.global_state["enable"] = not self.global_state["enable"]
+
+    def reset_robot(self):
+        self.client_dash.ResetRobot()
+
+    def clear_error(self):
+        self.client_dash.ClearError()
+
+    def confirm_speed(self):
+        self.client_dash.SpeedFactor(int(self.entry_speed.get()))
+
+    def movj(self):
+        self.client_move.MovJ(float(self.entry_dict["X:"].get()), float(self.entry_dict["Y:"].get()), float(self.entry_dict["Z:"].get()),
+                              float(self.entry_dict["R:"].get()))
+
+    def movl(self):
+        self.client_move.MovL(float(self.entry_dict["X:"].get()), float(self.entry_dict["Y:"].get()), float(self.entry_dict["Z:"].get()),
+                              float(self.entry_dict["R:"].get()))
+
+    def joint_movj(self):
+        self.client_move.JointMovJ(float(self.entry_dict["J1:"].get()), float(self.entry_dict["J2:"].get()), float(self.entry_dict["J3:"].get()),
+                                   float(self.entry_dict["J4:"].get()))
+
+    def confirm_do(self):
+        if self.combo_status.get() == "On":
+            print("Alto nivel")
+            self.client_dash.DO(int(self.entry_index.get()), 1)
+        else:
+            print("Nivel bajo")
+            self.client_dash.DO(int(self.entry_index.get()), 0)
+
+    def set_feed(self, text_list, x1, x2, x3, x4):
+        self.set_button_bind(
+            self.frame_feed, text_list[0][0], rely=0.2, x=x1, command=lambda: self.move_jog(text_list[0][0]))
+        self.set_button_bind(
+            self.frame_feed, text_list[0][1], rely=0.3, x=x1, command=lambda: self.move_jog(text_list[0][1]))
+        self.set_button_bind(
+            self.frame_feed, text_list[0][2], rely=0.4, x=x1, command=lambda: self.move_jog(text_list[0][2]))
+        self.set_button_bind(
+            self.frame_feed, text_list[0][3], rely=0.5, x=x1, command=lambda: self.move_jog(text_list[0][3]))
+
+        self.set_label(self.frame_feed, text_list[1][0], rely=0.21, x=x2)
+        self.set_label(self.frame_feed, text_list[1][1], rely=0.31, x=x2)
+        self.set_label(self.frame_feed, text_list[1][2], rely=0.41, x=x2)
+        self.set_label(self.frame_feed, text_list[1][3], rely=0.51, x=x2)
+
+        self.label_feed_dict[text_list[1][0]] = self.set_label(
+            self.frame_feed, " ", rely=0.21, x=x3)
+        self.label_feed_dict[text_list[1][1]] = self.set_label(
+            self.frame_feed, " ", rely=0.31, x=x3)
+        self.label_feed_dict[text_list[1][2]] = self.set_label(
+            self.frame_feed, " ", rely=0.41, x=x3)
+        self.label_feed_dict[text_list[1][3]] = self.set_label(
+            self.frame_feed, " ", rely=0.51, x=x3)
+
+        self.set_button_bind(
+            self.frame_feed, text_list[2][0], rely=0.2, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.set_button_bind(
+            self.frame_feed, text_list[2][1], rely=0.3, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.set_button_bind(
+            self.frame_feed, text_list[2][2], rely=0.4, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.set_button_bind(
+            self.frame_feed, text_list[2][3], rely=0.5, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+
+    def feed_back(self):
+        hasRead = 0
+        while True:
+            print("self.global_state(connect)", self.global_state["connect"])
+            if not self.global_state["connect"]:
+                break
+            data = bytes()
+            while hasRead < 1440:
+                temp = self.client_feed.socket_dobot.recv(1440 - hasRead)
+                if len(temp) > 0:
+                    hasRead += len(temp)
+                    data += temp
+            hasRead = 0
+
+            a = np.frombuffer(data, dtype=MyType)
+            print("robot_mode:", a["robot_mode"][0])
+            print("test_value:", hex((a['test_value'][0])))
+            if hex((a['test_value'][0])) == '0x123456789abcdef':
+                # print('tool_vector_actual',
+                #       np.around(a['tool_vector_actual'], decimals=4))
+                # print('q_actual', np.around(a['q_actual'], decimals=4))
+
+                # Actualizar propiedades
+                self.label_feed_speed["text"] = a["speed_scaling"][0]
+                self.label_robot_mode["text"] = LABEL_ROBOT_MODE[a["robot_mode"][0]]
+                self.label_di_input["text"] = bin(a["digital_input_bits"][0])[
+                    2:].rjust(64, '0')
+                self.label_di_output["text"] = bin(a["digital_outputs"][0])[
+                    2:].rjust(64, '0')
+
+                # Actualizar puntos de coordenadas
+                self.set_feed_joint(LABEL_JOINT, a["q_actual"])
+                self.set_feed_joint(LABEL_COORD, a["tool_vector_actual"])
+
+                # Comprobar alarmas
+                if a["robot_mode"] == 9:
+                    self.display_error_info()
+
+            time.sleep(0.005)
+
+    def display_error_info(self):
+        error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
+
+        error_list = json.loads(error_list)
+        print("error_list:", error_list)
+        if error_list[0]:
+            for i in error_list[0]:
+                self.form_error(i, self.alarm_controller_dict,
+                                "Controller Error")
+
+        for m in range(1, len(error_list)):
+            if error_list[m]:
+                for n in range(len(error_list[m])):
+                    self.form_error(n, self.alarm_servo_dict, "Servo Error")
+
+    def form_error(self, index, alarm_dict: dict, type_text):
+        if index in alarm_dict.keys():
+            date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
+            error_info = f"Time Stamp:{date}\n"
+            error_info = error_info + f"ID:{index}\n"
+            error_info = error_info + \
+                f"Type:{type_text}\nLevel:{alarm_dict[index]['level']}\n" + \
+                f"Solution:{alarm_dict[index]['en']['solution']}\n"
+
+            self.text_err.insert(END, error_info)
+
+    def clear_error_info(self):
+        self.text_err.delete("1.0", "end")
+
+    def set_feed_joint(self, label, value):
+        array_value = np.around(value, decimals=4)
+        self.label_feed_dict[label[1][0]]["text"] = array_value[0][0]
+        self.label_feed_dict[label[1][1]]["text"] = array_value[0][1]
+        self.label_feed_dict[label[1][2]]["text"] = array_value[0][2]
+        self.label_feed_dict[label[1][3]]["text"] = array_value[0][3]
