@@ -15,7 +15,7 @@ def center_aruco():
     # create detector parameters(crear parámetros de detector)
     parameters = aruco.DetectorParameters()
     detector= aruco.ArucoDetector(aruco_dict,parameters)
-    # lists of ids and the corners beloning to each id
+    # listas de identificadores y las esquinas que pertenecen a cada identificador
     corners, ids, rejected_img_points = detector.detectMarkers(rgb)
     if len(corners) != 0:
         point = np.average(corners[0][0], axis=0)
@@ -30,7 +30,7 @@ def center_aruco():
             x, y, z = rs.rs2_deproject_pixel_to_point(intr, [x, y], z)
             center = [x, y, z]
             # print("center is ", center)
-            #                     print(center)
+            # print(center)
             color_image = aruco.drawDetectedMarkers(rgb, corners)
 
     else:
