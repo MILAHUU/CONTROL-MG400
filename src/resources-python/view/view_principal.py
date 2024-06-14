@@ -1,5 +1,4 @@
 import os, sys
-
 # ---------copiar estas lineas de codigo en caso de marcar error en las importaciones----------
 # Obtener la ruta del directorio actual del script
 script_dir = os.path.dirname(os.path.abspath(__file__))
