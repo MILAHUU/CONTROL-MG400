@@ -13,4 +13,4 @@ sys.path.append(project_dir)
 from vista import main
 
 if __name__ == "__main__":
-    main()  # Ejecuta la función main de vista.py
+    main()  
