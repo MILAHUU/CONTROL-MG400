@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 
 # ---------copiar estas lineas de codigo en caso de marcar error en las importaciones----------
 # Obtener la ruta del directorio actual del script
@@ -9,9 +10,7 @@ project_dir = os.path.dirname(script_dir)
 sys.path.append(project_dir)
 # -----------------------------------------------------------------------------------------------
 
-from view.view_principal import RobotUI
+from vista import main  # Importa la función main de vista.py
 
-robot_ui = RobotUI()
-
-robot_ui.pack()
-robot_ui.mainloop()
+if __name__ == "__main__":
+    main()  # Ejecuta la función main de vista.py
