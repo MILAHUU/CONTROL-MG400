@@ -94,7 +94,7 @@ class RobotUI(object):
 
         # Conectar y desconectar
         self.button_connect = self.set_button(master=self.frame_robot,
-                                              text="Conectar", rely=0.6, x=630, command=self.connect_port)
+                                              text="Connect", rely=0.6, x=630, command=self.connect_port)
         self.button_connect["width"] = 10
         self.global_state["connect"] = False
 
@@ -104,7 +104,7 @@ class RobotUI(object):
 
         # Habilitar y desabilitar
         self.button_enable = self.set_button(master=self.frame_dashboard,
-                                             text="Encender", rely=0.1, x=10, command=self.enable)
+                                             text="enable", rely=0.1, x=10, command=self.enable)
         self.button_enable["width"] = 7
         self.global_state["enable"] = False
 

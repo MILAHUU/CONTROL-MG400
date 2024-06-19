@@ -1,0 +1,1740 @@
+[
+  
+    {
+      "id": 0,
+      "level": 0,
+      "es": {
+        "description": "No hay error",
+        "cause": "",
+        "solution": ""
+      }
+  },
+  {
+      "id": 1,
+      "level": 0,
+      "es": {
+        "description": "Placa UniIO desconectada",
+        "cause": "",
+        "solution": ""
+      }
+    },
+    {
+      "id": 2,
+      "level": 0,
+      "es": {
+        "description": "Eje 1 desconectado",
+        "cause": "",
+        "solution": ""
+      }
+    },
+    {
+      "id": 3,
+      "level": 0,
+      "es": {
+        "description": "Eje 2 desconectado",
+        "cause": "",
+        "solution": ""
+      }
+    },
+    {
+      "id": 4,
+      "level": 0,
+      "es": {
+        "description": "Eje 3 desconectado",
+        "cause": "",
+        "solution": ""
+      }
+    },
+    {
+      "id": 5,
+      "level": 0,
+      "es": {
+        "description": "Eje 4 desconectado",
+        "cause": "",
+        "solution": ""
+      }
+    },
+    {
+      "id": 16,
+      "level": 5,
+      "es": {
+          "description": "Error de cinemática inversa con singularidad",
+          "cause": "",
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
+        }
+    },
+    {
+      "id": 17,
+      "level": 5,
+      "es": {
+        "description": "Error de cinemática inversa sin solución",
+        "cause": "",
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
+        }
+    },
+    {
+      "id": 18,
+      "level": 5,
+      "es": {
+          "description": "La posición objetivo activa el límite de la articulación",
+          "cause": "",
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
+        }
+    },
+    {
+      "id": 19,
+      "level": 5,
+      "es": {
+          "description": "Datos duplicados en la instrucción JUMP o ARC o Circles",
+          "cause": "",
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
+        }
+    },
+    {
+      "id": 20,
+      "level": 5,
+      "es": {
+          "description": "Parámetros de entrada incorrectos para el arco",
+          "cause": "",
+          "solution": "Introduzca los parámetros correctos"
+        }
+    },
+    {
+      "id": 33,
+      "level": 5,
+      "es": {
+          "description": "Cinemática inversa sin solución durante el movimiento",
+          "cause": "",
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
+        }
+    },
+    {
+      "id": 34,
+      "level": 5,
+      "es": {
+          "description": "Cinemática inversa con resultado fuera del área de trabajo",
+          "cause": "",
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
+        }
+    },
+    {
+      "id": 48,
+      "level": 5,
+      "es": {
+          "description": "Exceso de velocidad en la articulación 1",
+          "cause": "",
+          "solution": "Restablezca la velocidad o vuelva a seleccionar el punto de movimiento lejos de la singularidad"
+        }
+    },
+    {
+      "id": 49,
+      "level": 5,
+      "es": {
+        "description": "Exceso de velocidad en la articulación 2",
+        "cause": "",
+        "solution": "Restablezca la velocidad o vuelva a seleccionar el punto de movimiento lejos de la singularidad"
+      }
+    },
+    {
+      "id": 50,
+      "level": 5,
+      "es": {
+        "description": "Exceso de velocidad en la articulación 3",
+        "cause": "",
+        "solution": "Restablezca la velocidad o vuelva a seleccionar el punto de movimiento lejos de la singularidad"
+      }
+    },
+    {
+      "id": 51,
+      "level": 5,
+      "es": {
+        "description": "Exceso de velocidad en la articulación 4",
+        "cause": "",
+        "solution": "Restablezca la velocidad o vuelva a seleccionar el punto de movimiento lejos de la singularidad"
+      }
+    },
+    {
+      "id": 52,
+      "level": 5,
+      "es": {
+        "description": "Posición de la articulación 1 fuera de rango",
+          "cause": "",
+          "solution": "Error interno, reinicie o contacte al fabricante"
+        }
+    },
+    {
+      "id": 53,
+      "level": 5,
+      "es": {
+          "description": "Error de retraso en la posición de la articulación 2",
+          "cause": "",
+          "solution": "Error interno, reinicie o contacte al fabricante"
+        }
+    },
+    {
+      "id": 54,
+      "level": 5,
+      "es": {
+        "description": "Error de retraso en la posición de la articulación 3",
+        "cause": "",
+          "solution": "Error interno, reinicie o contacte al fabricante"
+        }
+    },
+    {
+      "id": 55,
+      "level": 5,
+      "es": {
+        "description": "Error de retraso en la posición de la articulación 4",
+        "cause": "",
+          "solution": "Error interno, reinicie o contacte al fabricante"
+        }
+    },
+    {
+      "id": 64,
+      "level": 5,
+      "es": {
+          "description": "La articulación 1 excede el límite positivo",
+          "cause": "",
+          "solution": "Invierta el movimiento para salir del límite"
+        }
+    },
+    {
+        "id": 65,
+        "level": 5,
+        "es": {
+            "description": "La articulación 1 excede el límite negativo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 66,
+        "level": 5,
+        "es": {
+            "description": "La articulación 2 excede el límite positivo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 67,
+        "level": 5,
+        "es": {
+            "description": "La articulación 2 excede el límite negativo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 68,
+        "level": 5,
+        "es": {
+            "description": "La articulación 3 excede el límite positivo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 69,
+        "level": 5,
+        "es": {
+            "description": "La articulación 3 excede el límite negativo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 70,
+        "level": 5,
+        "es": {
+            "description": "La articulación 4 excede el límite positivo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 71,
+        "level": 5,
+        "es": {
+            "description": "La articulación 4 excede el límite negativo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 72,
+        "level": 5,
+        "es": {
+            "description": "Límite positivo del paralelogramo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 73,
+        "level": 5,
+        "es": {
+            "description": "Límite negativo del paralelogramo",
+            "cause": "",
+            "solution": "Invierta el movimiento para salir del límite"
+          }
+    },
+    {
+        "id": 74,
+        "level": 5,
+        "es": {
+            "description": "La articulación 6 excede el límite positivo",
+            "cause": "",
+            "solution": ""
+          }
+    },
+    {
+        "id": 75,
+        "level": 5,
+        "es": {
+            "description": "La articulación 6 excede el límite negativo",
+            "cause": "",
+            "solution": ""
+          }
+    },
+    {
+        "id": 80,
+        "level": 0,
+        "es": {
+          "description": "La articulación 1 pierde paso",
+          "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 81,
+        "level": 0,
+        "es": {
+          "description": "La articulación 2 pierde paso",
+          "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 82,
+        "level": 0,
+        "es": {
+          "description": "La articulación 3 pierde paso",
+          "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 83,
+        "level": 0,
+        "es": {
+          "description": "La articulación 4 pierde paso",
+          "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 84,
+        "level": 5,
+        "es": {
+            "description": "Tiempo de espera del algoritmo",
+            "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 85,
+        "level": 0,
+        "es": {
+            "description": "Botón de parada de emergencia de hardware presionado o disparo de parada de emergencia de software",
+            "cause": "",
+            "solution": "Si el botón de parada de emergencia de hardware está presionado, suéltelo; si la parada de emergencia de software se activa, haga clic nuevamente en el botón de parada de emergencia de software"
+          }
+    },
+    {
+        "id": 86,
+        "level": 0,
+        "es": {
+            "description": "Botón de emergencia del usuario presionado",
+            "cause": "",
+            "solution": "Suelte el botón de parada de emergencia del usuario"
+          }
+    },
+    {
+        "id": 96,
+        "level": 0,
+        "es": {
+            "description": "Alarma de conducción de la articulación 1",
+            "cause": "",
+            "solution": "Verifique si la comunicación de la articulación 1 es normal y luego borre el error"
+          }
+    },
+    {
+        "id": 97,
+        "level": 0,
+        "es": {
+            "description": "Apagado del servo de la articulación 1",
+            "cause": "",
+            "solution": "Vuelva a habilitar la articulación 1"
+          }
+    },
+    {
+        "id": 98,
+        "level": 0,
+        "es": {
+            "description": "Alarma de conducción de la articulación 2",
+            "cause": "",
+            "solution": "Verifique si la comunicación de la articulación 2 es normal y luego borre el error"
+          }
+    },
+    {
+        "id": 99,
+        "level": 0,
+        "es": {
+            "description": "Apagado del servo de la articulación 2",
+            "cause": "",
+            "solution": "Vuelva a habilitar la articulación 2"
+          }
+    },
+    {
+        "id": 100,
+        "level": 0,
+        "es": {
+            "description": "Alarma de conducción de la articulación 3",
+            "cause": "",
+            "solution": "Vuelva a habilitar la articulación 3"
+          }
+    },
+    {
+        "id": 101,
+        "level": 0,
+        "es": {
+            "description": "Apagado del servo de la articulación 3",
+            "cause": "",
+            "solution": "Vuelva a habilitar la articulación 3"
+          }
+    },
+    {
+        "id": 102,
+        "level": 0,
+        "es": {
+            "description": "Alarma de conducción de la articulación 4",
+            "cause": "",
+            "solution": "Vuelva a habilitar la articulación 4"
+          }
+    },
+    {
+        "id": 103,
+        "level": 0,
+        "es": {
+            "description": "Apagado del servo de la articulación 4",
+            "cause": "",
+            "solution": "Vuelva a habilitar la articulación 4"
+          }
+    },
+    {
+        "id": 104,
+        "level": 5,
+        "es": {
+            "description": "Fallo en el posicionamiento del robot",
+            "cause": "",
+            "solution": "Posicione nuevamente"
+          }
+    },
+    {
+        "id": 105,
+        "level": 5,
+        "es": {
+            "description": "Fallo en la activación del servo del robot",
+            "cause": "",
+            "solution": "Verifique si el hardware es normal y vuelva a habilitar"
+          }
+    },
+    {
+        "id": 106,
+        "level": 5,
+        "es": {
+            "description": "Datos anormales del transportador",
+            "cause": "",
+            "solution": ""
+          }
+    },
+    {
+        "id": 107,
+        "level": 5,
+        "es": {
+            "description": "Sincronización anormal del transportador",
+            "cause": "",
+            "solution": ""
+          }
+    },
+    {
+        "id": 108,
+        "level": 5,
+        "es": {
+            "description": "El codificador del transportador 1 está desconectado",
+            "cause": "",
+            "solution": ""
+          }
+    },
+    {
+        "id": 109,
+        "level": 5,
+        "es": {
+            "description": "El codificador del transportador 2 está desconectado",
+            "cause": "",
+            "solution": ""
+          }
+    },
+    {
+        "id": 110,
+        "level": 5,
+        "es": {
+            "description": "Error de posición del codificador",
+            "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 112,
+        "level": 5,
+        "es": {
+            "description": "Detección de colisión",
+            "cause": "",
+            "solution": "Manténgase alejado del área de trabajo y continúe funcionando"
+          }
+    },
+    {
+        "id": 161,
+        "level": 5,
+        "es": {
+            "description": "Error al cambiar el modo de arrastrar y soltar",
+            "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 4096,
+        "level": 5,
+        "es": {
+            "description": "Error al abrir el archivo mecánico",
+            "cause": "",
+            "solution": "Verifique si la ubicación del archivo es correcta y reinicie"
+          }
+    },
+    {
+        "id": 8192,
+        "level": 5,
+        "es": {
+            "description": "Error al abrir el archivo del proyecto",
+            "cause": "",
+            "solution": "Verifique si la ubicación del archivo es correcta y reinicie"
+          }
+    },
+    {
+        "id": 8193,
+        "level": 5,
+        "es": {
+            "description": "Error al abrir el archivo del programa",
+            "cause": "",
+            "solution": "Verifique si la ubicación del archivo es correcta y reinicie"
+          }
+    },
+    {
+        "id": 8194,
+        "level": 5,
+        "es": {
+            "description": "Error al abrir el archivo de variables globales",
+            "cause": "",
+            "solution": "Verifique si la ubicación del archivo es correcta y reinicie"
+          }
+    },
+    {
+        "id": 8195,
+        "level": 5,
+        "es": {
+            "description": "Error al abrir el archivo de puntos de enseñanza",
+            "cause": "",
+            "solution": "Verifique si la ubicación del archivo es correcta y reinicie"
+          }
+    },
+    {
+        "id": 8196,
+        "level": 0,
+        "es": {
+            "description": "Error al iniciar el proceso del depurador",
+            "cause": "",
+            "solution": "Vuelva a ejecutar"
+          }
+    },
+    {
+        "id": 12288,
+        "level": 0,
+        "es": {
+            "description": "Detección de parada de emergencia",
+            "cause": "",
+            "solution": "Encienda de nuevo"
+          }
+    },
+    {
+        "id": 12289,
+        "level": 0,
+        "es": {
+            "description": "Detección de parada de emergencia externa",
+            "cause": "",
+            "solution": "Encienda de nuevo"
+          }
+    },
+    {
+        "id": 12290,
+        "level": 0,
+        "es": {
+            "description": "La temperatura de la placa de potencia del servo es demasiado alta",
+            "cause": "",
+            "solution": "Apague la máquina y deje que se enfríe por un tiempo"
+          }
+    },
+    {
+        "id": 12292,
+        "level": 0,
+        "es": {
+            "description": "Detección de parada de seguridad",
+            "cause": "",
+            "solution": "Después de garantizar la seguridad, restaure el dispositivo de seguridad"
+          }
+    },
+    {
+        "id": 12293,
+        "level": 0,
+        "es": {
+            "description": "Se detectó desconexión del servo",
+            "cause": "",
+            "solution": "Error interno, reinicie o contacte al fabricante"
+          }
+    },
+    {
+        "id": 12294,
+        "level": 5,
+        "es": {
+            "description": "Detección de colisión",
+            "cause": "",
+            "solution": "Manténgase alejado del área de trabajo y continúe funcionando"
+          }
+    },
+    {
+        "id": 20480,
+        "level": 5,
+        "es": {
+            "description": "El límite positivo del eje AUX Joint1 se excedió",
+            "cause": "",
+            "solution": "Mueva en reversa fuera del límite"
+          }
+    },
+    {
+        "id": 20481,
+        "level": 5,
+        "es": {
+            "description": "El límite negativo del eje AUX Joint1 se excedió",
+            "cause": "",
+            "solution": "Mueva en reversa fuera del límite"
+          }
+    },
+    {
+        "id": 20482,
+        "level": 5,
+        "es": {
+            "description": "Fallo en la comunicación del eje AUX Joint1",
+            "cause": "",
+            "solution": "Verifique si la comunicación del eje AUX Joint1 es normal y luego borre el error"
+          }
+    },
+    {
+      "id": 20483,
+        "level": 5,
+        "es": {
+            "description": "La posición del eje AUX Joint1 está fuera del área de trabajo",
+            "cause": "",
+            "solution": "Seleccione nuevamente los puntos de movimiento"
+          }
+    },
+    {
+      "id": 20484,
+      "level": 0,
+      "es": {
+            "description": "Se presionó el botón de parada de emergencia del eje AUX Joint1",
+            "cause": "",
+            "solution": "Suelte el botón de parada de emergencia del hardware"
+          }
+    },
+    {
+        "id": 33024,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción CP",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 33025,
+        "level": 5,
+        "es": {
+            "description": "Los parámetros de entrada de la instrucción CP están fuera de rango",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 33280,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción Arch",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 33281,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de índice de la instrucción Arch está fuera de rango",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 33282,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de índice de la instrucción Arch no está configurado aún",
+            "cause": "",
+            "solution": "Por favor, configure los parámetros de índice"
+          }
+    },
+    {
+        "id": 33536,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción LimZ",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 33537,
+        "level": 5,
+        "es": {
+          "description": "Los parámetros de entrada de la instrucción LimZ están fuera de rango",
+          "cause": "",
+          "solution": "Ingrese los parámetros correctos"
+        }
+    },
+    {
+        "id": 33792,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción Speed",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 33793,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción Speed está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 34048,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción Accel",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 34049,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción Accel está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 34304,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción Jerk",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 34305,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción Jerk está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 34560,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción SpeedS",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 34561,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción SpeedS está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 34816,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción SpeedR",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 34817,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción SpeedR está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 35072,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción AccelS",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 35073,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción AccelS está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 35328,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción AccelR",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 35329,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción AccelR está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 35584,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción JerkS",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 35585,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción JerkS está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 35840,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción JerkR",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+        "id": 35841,
+        "level": 5,
+        "es": {
+            "description": "El parámetro de razón de la instrucción JerkR está fuera de rango [1, 100]",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+          }
+    },
+    {
+        "id": 36096,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción Go",
+            "cause": "",
+            "solution": "Por favor, ingrese los parámetros"
+          }
+    },
+    {
+          "id": 36097,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetro de punto de movimiento para la instrucción Go",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36098,
+          "level": 5,
+          "es": {
+              "description": "Punto de movimiento incorrecto para la instrucción Go",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36099,
+          "level": 5,
+          "es": {
+              "description": "Parámetro de control incorrecto para la instrucción Go",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36352,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetros de entrada para la instrucción Move",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36353,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetro de punto de movimiento para la instrucción Move",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36354,
+          "level": 5,
+          "es": {
+              "description": "Punto de movimiento incorrecto para la instrucción Move",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36355,
+          "level": 5,
+          "es": {
+              "description": "Parámetro de control incorrecto para la instrucción Move",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36608,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetros de entrada para la instrucción Arch3",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36609,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetro de punto de movimiento para la instrucción Arch3",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36610,
+          "level": 5,
+          "es": {
+              "description": "Punto de movimiento incorrecto para la instrucción Arch3",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36611,
+          "level": 5,
+          "es": {
+              "description": "Parámetro de control incorrecto para la instrucción Arch3",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36864,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetros de entrada para la instrucción Jump",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36865,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetro de punto de movimiento para la instrucción Jump",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+          "id": 36866,
+          "level": 5,
+          "es": {
+              "description": "Punto de movimiento incorrecto para la instrucción Jump",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+          "id": 36867,
+          "level": 5,
+          "es": {
+              "description": "Parámetro de control incorrecto para la instrucción Jump",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+        "id": 40960,
+        "level": 5,
+        "es": {
+              "description": "No hay parámetros de entrada para la instrucción Circle3",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+        "id": 40961,
+        "level": 5,
+        "es": {
+              "description": "No hay parámetro de punto de movimiento para la instrucción Circle3",
+              "cause": "",
+              "solution": "Por favor, ingrese los parámetros"
+            }
+      },
+      {
+        "id": 40962,
+        "level": 5,
+        "es": {
+              "description": "Punto de movimiento incorrecto para la instrucción Circle3",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+        "id": 40963,
+        "level": 5,
+        "es": {
+              "description": "Parámetro de control incorrecto para la instrucción Circle3",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+        "id": 45056,
+        "level": 5,
+        "es": {
+              "description": "Error de opción en Circle3",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+        "id": 45057,
+        "level": 5,
+        "es": {
+              "description": "Error de opción en Jump",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+        "id": 45058,
+        "level": 5,
+        "es": {
+              "description": "Error de opción en Arch",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+            }
+      },
+      {
+            "id": 45059,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Arch3",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+            },
+            {
+            "id": 45060,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Jerk",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+            },
+            {
+            "id": 45061,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en JerkR",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+            },
+            {
+            "id": 45062,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en JerkS",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+            },
+            {
+            "id": 45063,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Accel",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45064,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en AccelR",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45065,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en AccelS",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45066,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en SpeedFactor",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45067,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Speed",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45068,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en SpeedR",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45069,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Limz",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+            },
+            {
+            "id": 45070,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en CP",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45071,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en DO",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45072,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Go",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45073,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Move",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45074,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en MoveJ",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45075,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en Ecp",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45076,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en EcpSet",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 45077,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en SetExicitMode",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+            "id": 106,
+            "level": 5,
+            "es": {
+                "description": "Error al detener el seguimiento de la cinta transportadora",
+                "cause": "",
+                "solution": "Error interno, reinicie o contacte al fabricante"
+              }
+        },
+        {
+            "id": 107,
+            "level": 5,
+            "es": {
+                "description": "Error de sincronización en el seguimiento de la cinta transportadora",
+                "cause": "",
+                "solution": "Error interno, reinicie o contacte al fabricante"
+              }
+        },
+        {
+            "id": 32768,
+            "level": 5,
+            "es": {
+                "description": "No hay parámetros de entrada para la instrucción speedFactor",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+              }
+        },
+        {
+              "id": 32769,
+              "level": 5,
+              "es": {
+                  "description": "Parámetros de entrada de la instrucción speedFactor fuera de rango",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+              {
+              "id": 32770,
+              "level": 5,
+              "es": {
+                  "description": "Error en los parámetros de entrada de DO",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+          },
+          {
+              "id": 32771,
+              "level": 5,
+              "es": {
+                  "description": "Error en los parámetros de entrada de DI",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+              {
+              "id": 32776,
+              "level": 5,
+              "es": {
+                  "description": "Error en el número de parámetros de DOGroup",
+                  "cause": "",
+                  "solution": "Demasiados parámetros"
+                }
+              },
+              {
+              "id": 32777,
+              "level": 5,
+              "es": {
+                  "description": "DOGroup tiene algunos índices de parámetros fuera de rango",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+              {
+              "id": 32778,
+              "level": 5,
+              "es": {
+                  "description": "DOGroup tiene un error en el tipo de algunos índices de parámetros",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+              {
+              "id": 32779,
+              "level": 5,
+              "es": {
+                  "description": "DOGroup tiene un error en el tipo de valor de algunos parámetros",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos, se necesita tipo numérico y booleano, ej. (0/1) || (verdadero/falso) || (ON/OFF)"
+                }
+              },
+              {
+              "id": 32780,
+              "level": 5,
+              "es": {
+                  "description": "DOGroup tiene un error en el tipo de isqueue de algunos parámetros",
+                  "cause": "",
+                  "solution": "Ej. (0/1) || (verdadero/falso) || (ON/OFF). verdadero significa comando en cola (por defecto), falso: comando inmediato"
+                }
+              },
+          {
+              "id": 32781,
+              "level": 5,
+              "es": {
+                  "description": "Error interno en DOGroup",
+                  "cause": "",
+                  "solution": "Se ha producido un error interno, intente nuevamente."
+                }
+              },
+          {
+              "id": 36100,
+              "level": 5,
+              "es": {
+                  "description": "No hay parámetros de entrada para la instrucción movej",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36101,
+              "level": 5,
+              "es": {
+                  "description": "No hay parámetros de punto de movimiento para la instrucción movej",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36102,
+              "level": 5,
+              "es": {
+                  "description": "No hay parámetros de punto de movimiento para la instrucción movej",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36103,
+              "level": 5,
+              "es": {
+                  "description": "Punto de movimiento incorrecto para la instrucción RP",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36104,
+              "level": 5,
+              "es": {
+                  "description": "Desplazamiento incorrecto para la instrucción RP",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36105,
+              "level": 5,
+              "es": {
+                  "description": "Punto de movimiento incorrecto para la instrucción RJ",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36106,
+              "level": 5,
+              "es": {
+                  "description": "Desplazamiento incorrecto para la instrucción RJ",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36107,
+              "level": 5,
+              "es": {
+                  "description": "No hay parámetros de entrada para la instrucción GoR",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36108,
+              "level": 5,
+              "es": {
+                  "description": "Punto de movimiento incorrecto para la instrucción GoR",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36109,
+              "level": 5,
+              "es": {
+                  "description": "No hay parámetros de entrada para la instrucción MoveJR",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+              },
+          {
+              "id": 36110,
+              "level": 5,
+              "es": {
+                  "description": "Punto de movimiento incorrecto para la instrucción MoveJR",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+          },
+          {
+              "id": 36121,
+              "level": 5,
+              "es": {
+                  "description": "Error en la cinemática inversa de RP sin solución",
+                  "cause": "",
+                  "solution": "Vuelva a seleccionar los puntos de movimiento"
+                }
+          },
+          {
+              "id": 36122,
+              "level": 5,
+              "es": {
+                  "description": "Error en la cinemática inversa de RP con resultado fuera del área de trabajo",
+                  "cause": "",
+                  "solution": "Vuelva a seleccionar los puntos de movimiento"
+                }
+          },
+          {
+              "id": 45079,
+              "level": 5,
+              "es": {
+                  "description": "Error de opción en loadSwitch",
+                  "cause": "",
+                  "solution": "Ingrese los parámetros correctos"
+                }
+          },
+          {
+            "id": 45080,
+            "level": 5,
+            "es": {
+                "description": "Error en las opciones de loadSet",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45081,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en CPParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45082,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en TOOLParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45083,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en USERParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45084,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en SPEEDParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45085,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en SPEEDSParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45086,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en ACCELParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45087,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en ACCELSParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45088,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en ARCHParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45089,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en STARTParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45090,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en ZLIMITParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45091,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en ENDParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45092,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en SYNCaram",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45093,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en ARMParam",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45312,
+            "level": 5,
+            "es": {
+                "description": "Error de opción en loadSwitch",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 45313,
+            "level": 5,
+            "es": {
+                "description": "Error en las opciones de loadSet",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 49152,
+            "level": 5,
+            "es": {
+                "description": "Habilitar control remoto cuando está habilitado",
+                "cause": "",
+                "solution": "Habilitar a continuación y luego cambiar"
+            }
+        },
+        {
+            "id": 36111,
+            "level": 5,
+            "es": {
+                "description": "No hay parámetros de entrada para la instrucción GoIO",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 36112,
+            "level": 5,
+            "es": {
+                "description": "Punto de movimiento incorrecto para la instrucción GoIO",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 36113,
+            "level": 5,
+            "es": {
+                "description": "Parámetros incorrectos para la instrucción GoIO",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 36114,
+            "level": 5,
+            "es": {
+                "description": "No hay parámetros de entrada para la instrucción MoveIO",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },
+        {
+            "id": 36115,
+            "level": 5,
+            "es": {
+                "description": "Punto de movimiento incorrecto para la instrucción MoveIO",
+                "cause": "",
+                "solution": "Ingrese los parámetros correctos"
+            }
+        },      
+        {
+          "id": 36116,
+          "level": 5,
+          "es": {
+              "description": "Parámetros incorrectos para la instrucción MoveIO",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+          }
+      },
+      {
+          "id": 36117,
+          "level": 5,
+          "es": {
+              "description": "No hay parámetros de entrada para la instrucción MoveJIO",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+          }
+      },
+      {
+          "id": 36118,
+          "level": 5,
+          "es": {
+              "description": "Punto de movimiento incorrecto para la instrucción MoveJIO",
+              "cause": "",
+              "solution": "Ingrese los parámetros correctos"
+          }
+      },
+      {
+        "id": 36119,
+        "level": 5,
+        "es": {
+            "description": "No hay parámetros de entrada para la instrucción MoveJIO",
+            "cause": "",
+            "solution": "Ingrese los parámetros correctos"
+        }
+    }    
+]
