@@ -199,4 +199,537 @@ alarm_servo_list = [
             "solution" : "System error, please contact technical support engineer"
         }
     },
+     {
+        "id": 12592,
+        "level": 0,
+        "en": {
+            "description" : "Main circuit electrical shortage",
+            "cause" : "1. Potencia de entrada R S T Faltan 2 fases 2. La unidad está dañada",
+            "solution" : "Check the cable connection of power, otherwise, replace the driver"
+        }
+    },
+        {
+        "id": 12576,
+        "level": 0,
+        "en": {
+            "description" : "Control of electrical undervoltage",
+            "cause" : "1. La fuente de alimentación de control es inestable o está apagada; 2. El cable de control está en mal contacto",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 33920,
+        "level": 0,
+        "en": {
+            "description" : "Overspeed",
+            "cause" : "1. Error de cableado de secuencia de fase U V W 2. Umbral de juicio de falla de sobrevelocidad establecido demasiado pequeño 3. Sobreimpulso de velocidad del motor 4. Daños en la unidad",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 65296,
+        "level": 0,
+        "en": {
+            "description" : "Pulse output overspeed",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 65282,
+        "level": 0,
+        "en": {
+            "description" : "Failure to identify angles",
+            "cause" : "El codificador del motor no pudo ponerlo a cero",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 9040,
+        "level": 0,
+        "en": {
+            "description" : "Drive overload",
+            "cause" : "Hay un desajuste entre el motor y la potencia de accionamiento",
+            "solution" : "Replace the driver"
+        }
+    },
+    {
+        "id":29056,
+        "level": 0,
+        "en": {
+            "description" : "Motor overload",
+            "cause" : "1. La carga es demasiado pesada, el par efectivo excede el par nominal y continúa funcionando durante mucho tiempo. 2. Un mal ajuste de ganancia conduce a la acción de vibración y oscilación. El motor vibra y emite sonidos anormales. 3. El cableado del motor está incorrecto y roto. 4. La máquina está sujeta a colisión, la máquina de repente se vuelve más pesada y la máquina se retuerce.",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 28961,
+        "level": 0,
+        "en": {
+            "description" : "Overheating protection for blocked motors",
+            "cause" : "1. El motor está atascado mecánicamente 2. La salida del controlador U V W está desfasada o la secuencia de fase es incorrecta",
+            "solution" : "Check whether the hardware is working properly, or contact technical support engineer"
+        }
+    },
+    {
+        "id": 17168,
+        "level": 0,
+        "en": {
+            "description" : "Radiator overheating",
+            "cause" : "1. La temperatura ambiente es demasiado alta, 2. El ventilador de accionamiento está dañado, 3. El servoaccionamiento está defectuoso internamente",
+            "solution" : "Drop the environment temperature, or contact technical support engineer"
+        }
+    },
+        {
+        "id": 29571,
+        "level": 0,
+        "en": {
+            "description" : "Encoder battery failure",
+            "cause" : "1. Durante el corte de energía, el codificador no está conectado a la batería 2. El voltaje de la batería del codificador es demasiado bajo",
+            "solution" : "Connect battery, or contact technical support engineer"
+        }
+    },
+    {
+        "id": 29490,
+        "level": 0,
+        "en": {
+            "description" : "Encoder multi-turn count error",
+            "cause" : "Fallo del codificador",
+            "solution" : "Replace the motor"
+        }
+    },
+        {
+        "id": 29491,
+        "level": 0,
+        "en": {
+            "description" : "Encoder multi-turn count overflow",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 29492,
+        "level": 0,
+        "en": {
+            "description" : "Encoder interference",
+            "cause" : "La señal Z del codificador se multiplica, lo que hace que el ángulo correspondiente de la señal Z cambie demasiado",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 29493,
+        "level": 0,
+        "en": {
+            "description" : "External encoder scale failure",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 29494,
+        "level": 0,
+        "en": {
+            "description" : "Encoder data abnormalities",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 29495,
+        "level": 0,
+        "en": {
+            "description" : "Encoder return checksum exception",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 29496,
+        "level": 0,
+        "en": {
+            "description" : "Loss of encoder Z signal",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 34321,
+        "level": 0,
+        "en": {
+            "description" : "Excessive position deviation",
+            "cause" : "1. El motor no gira 2. La ganancia del controlador es demasiado pequeña 3. La configuración H0A.08 es demasiado pequeña en relación con las condiciones de funcionamiento",
+            "solution" : "Check whether the motor is working properly, or contact technical support engineer"
+        }
+    },
+    {
+        "id": 34322,
+        "level": 0,
+        "en": {
+            "description" : "Position command too large",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 34323,
+        "level": 0,
+        "en": {
+            "description" : "Excessive deviation from fully closed-loop position",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 25380,
+        "level": 0,
+        "en": {
+            "description" : "Electronic gear setting overrun",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 25381,
+        "level": 0,
+        "en": {
+            "description" : "Wrong parameter setting for fully closed loop function",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 25382,
+        "level": 0,
+        "en": {
+            "description" : "Software position upper and lower limits set incorrectly",
+            "cause" : "El valor establecido en el diccionario de objetos 0x607D-01h es menor que el valor de 0x607D-02h",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 25383,
+        "level": 0,
+        "en": {
+            "description" : "Wrong home position offset setting",
+            "cause" : "El valor de desplazamiento de origen está fuera de los límites superior e inferior de la posición del software",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 30083,
+        "level": 0,
+        "en": {
+            "description" : "Loss of synchronisation",
+            "cause" : "Durante la comunicación síncrona, se pierde la señal de sincronización de maestra",
+            "solution" : ""
+        }
+    },
+        {
+        "id": 30081,
+        "level": 0,
+        "en": {
+            "description" : "Unburned XML configuration file",
+            "cause" : "El archivo de configuración del dispositivo no se ha grabado",
+            "solution" : "Burn the XML configuration file"
+        }
+    },
+    {
+        "id": 65298,
+        "level": 0,
+        "en": {
+            "description" : "Network initialization failure",
+            "cause" : "1. El firmware de la FPGA no está flasheado 2. El archivo de configuración del dispositivo no está grabado 3. La unidad está defectuosa",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 30082,
+        "level": 0,
+        "en": {
+            "description" : "Sync cycle configuration error",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 30084,
+        "level": 0,
+        "en": {
+            "description" : "Excessive synchronisation period error",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 25384,
+        "level": 0,
+        "en": {
+            "description" : "Fault in crossover pulse output setting",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 65521,
+        "level": 0,
+        "en": {
+            "description" : "Zero return timeout fault",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 29570,
+        "level": 0,
+        "en": {
+            "description" : "Encoder battery warning",
+            "cause" : "El voltaje de la batería es inferior a 3,0 V",
+            "solution" : "Replace battery"
+        }
+    },
+    {
+        "id": 21570,
+        "level": 0,
+        "en": {
+            "description" : "DI emergency brake",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 12851,
+        "level": 0,
+        "en": {
+            "description" : "Motor overload warning",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 12817,
+        "level": 0,
+        "en": {
+            "description" : "Brake resistor overload alarm",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 25385,
+        "level": 0,
+        "en": {
+            "description" : "External braking resistor too small",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 13105,
+        "level": 0,
+        "en": {
+            "description" : "Motor power cable disconnection",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+        {
+        "id": 25386,
+        "level": 0,
+        "en": {
+            "description" : "Change of parameters requires re-powering to take effect",
+            "cause" : "Los parámetros modificados pertenecen a los parámetros que surten efecto cuando la alimentación está apagada",
+            "solution" : "Clear the alarm and power on again"
+        }
+    },
+    {
+        "id": 30208,
+        "level": 0,
+        "en": {
+            "description" : "Frequent parameter storage",
+            "cause" : "El sistema informático host vuelve a cambiar repetidamente los parámetros",
+            "solution" : "Check whether the upper computer is working normal, or contact technical support engineer"
+        }
+    },
+
+            {
+        "id": 21571,
+        "level": 0,
+        "en": {
+            "description" : "Forward overtravel warning",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 21572,
+        "level": 0,
+        "en": {
+            "description" : "Reverse overtravel warning",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 29569,
+        "level": 0,
+        "en": {
+            "description" : "Internal failure of the encoder",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 12597,
+        "level": 0,
+        "en": {
+            "description" : "Input phase failure warning",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 65432,
+        "level": 0,
+        "en": {
+            "description" : "Zero return mode setting error",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 65344,
+        "level": 0,
+        "en": {
+            "description" : "Parameter recognition failure",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+
+    {
+        "id": 21121,
+        "level": 0,
+        "en": {
+            "description" : "internal error",
+            "cause" : "Restablecimiento del perro guardián",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 29956,
+        "level": 0,
+        "en": {
+            "description" : "FPGA configuration error",
+            "cause" : "Error en la inicialización de FPGA",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 51020,
+        "level": 0,
+        "en": {
+            "description" : "Driver board identification error",
+            "cause" : "PowerID es incorrecto",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 29568,
+        "level": 0,
+        "en": {
+            "description" : "Encoder connection error",
+            "cause" : "1. El enchufe del codificador está suelto 2. El tipo de codificador está configurado incorrectamente 3. El codificador del motor está dañado 4. El controlador está defectuoso",
+            "solution" : "Check the cable connection of encoder, or contact technical support engineer"
+        }
+    },
+    {
+        "id": 8992,
+        "level": 0,
+        "en": {
+            "description" : "Software overcurrent",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 9088,
+        "level": 0,
+        "en": {
+            "description" : "Current zero point too large",
+            "cause" : "Falló el arranque del módulo de muestreo actual",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 30080,
+        "level": 0,
+        "en": {
+            "description" : "EtherCAT communication failure",
+            "cause" : "La comunicación EtherCAT está desconectada",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 33921,
+        "level": 0,
+        "en": {
+            "description" : "Excessive speed tracking error",
+            "cause" : "1. Parada del motor 2. Desconexión de salida UVW 3. Límite de salida de par 4. El ajuste de ganancia del controlador es demasiado pequeño 5. Daños en el controlador o el motor",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 21120,
+        "level": 0,
+        "en": {
+            "description" : "STO Warning",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 21569,
+        "level": 0,
+        "en": {
+            "description" : "Upper and lower board connection failure",
+            "cause" : "La placa de control del servo está conectada a la placa del controlador de manera anormal",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 8980,
+        "level": 0,
+        "en": {
+            "description" : "Busbar overcurrent",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 17169,
+        "level": 0,
+        "en": {
+            "description" : "Damaged or uninstalled temperature measuring resistors",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+    {
+        "id": 29572,
+        "level": 0,
+        "en": {
+            "description" : "Encoder Eeprom reading CRC fault",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    },
+            {
+        "id": 12928,
+        "level": 0,
+        "en": {
+            "description" : "Servo and motor power matching faults",
+            "cause" : "",
+            "solution" : "System error, please contact technical support engineer"
+        }
+    }
 ]
