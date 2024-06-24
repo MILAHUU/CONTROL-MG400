@@ -104,15 +104,15 @@ class RobotUI(object):
 
         # Habilitar y desabilitar
         self.button_enable = self.set_button(master=self.frame_dashboard,
-                                             text="enable", rely=0.1, x=10, command=self.enable)
+                                             text="Enable", rely=0.1, x=10, command=self.enable)
         self.button_enable["width"] = 7
         self.global_state["enable"] = False
 
         # Restablecer robot / Borrar error
         self.set_button(master=self.frame_dashboard,
-                        text="Reiniciar robot", rely=0.1, x=145, command=self.reset_robot)
+                        text="Reset Robot", rely=0.1, x=145, command=self.reset_robot)
         self.set_button(master=self.frame_dashboard,
-                        text="Borrar error", rely=0.1, x=290, command=self.clear_error)
+                        text="Clear Error", rely=0.1, x=290, command=self.clear_error)
 
         # Relación de velocidad
         self.label_speed = Label(self.frame_dashboard, text="Relación de velocidad:")
@@ -126,7 +126,7 @@ class RobotUI(object):
         self.label_cent.place(rely=0.1, x=550)
 
         self.set_button(master=self.frame_dashboard,
-                        text="Confirmar", rely=0.1, x=586, command=self.confirm_speed)
+                        text="Confirm", rely=0.1, x=586, command=self.confirm_speed)
 
         # DO:Salidas digitales
         self.label_digitial = Label(
@@ -138,7 +138,7 @@ class RobotUI(object):
             self.frame_dashboard, width=5, textvariable=i_value)
         self.entry_index.place(rely=0.55, x=160)
 
-        self.label_status = Label(self.frame_dashboard, text="Estado:")
+        self.label_status = Label(self.frame_dashboard, text="Status:")
         self.label_status.place(rely=0.55, x=220)
 
         self.combo_status = ttk.Combobox(self.frame_dashboard, width=5)
@@ -147,7 +147,7 @@ class RobotUI(object):
         self.combo_status["state"] = "solo lectura"
         self.combo_status.place(rely=0.55, x=275)
 
-        self.set_button(self.frame_dashboard, "Confirmar",
+        self.set_button(self.frame_dashboard, "Confirm",
                         rely=0.55, x=350, command=self.confirm_do)
 
         #Función de movimiento
@@ -222,7 +222,7 @@ class RobotUI(object):
             self.frame_err, width=170, height=50, relief="flat")
         self.text_err.place(rely=0, relx=0, relheight=0.7, relwidth=1)
 
-        self.set_button(self.frame_feed, "Limpiar", rely=0.71,
+        self.set_button(self.frame_feed, "Clear", rely=0.71,
                         x=487, command=self.clear_error_info)
 
         # Registro
