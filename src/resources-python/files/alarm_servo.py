@@ -114,7 +114,7 @@ alarm_servo_list = [
         "en": {
             "description" : "Data in the motor encoder ROM is incorrectly checked or parameters are not stored",
             "cause" : "",
-            "solution" : "系统错误，请联系技术支持工程师"
+            "solution" : "Error del sistema, póngase en contacto con el ingeniero de soporte técnico"
         }
     },
     {
@@ -122,13 +122,8 @@ alarm_servo_list = [
         "level": 0,
         "en": {
             "description" : "Hardware overcurrent",
-            "cause" : "",
+            "cause" : "1. El comando de entrada está sincronizado con el servo de encendido y encendido o el comando de entrada es demasiado rápido 2. La resistencia de frenado es demasiado pequeña o está en cortocircuito 3. El cable del motor no está en buen contacto 4. El cable del motor está conectado a tierra 5. El cable UVW del motor está en cortocircuito 6. El motor está quemado 7. El ajuste de ganancia no es razonable y el motor oscila 8. El codificador está cableado incorrectamente, envejecido y corrosión, y el enchufe del codificador está suelto 9. El controlador está defectuoso",
             "solution" : "System error, please contact technical support engineer"
-        },
-        "zh_CN": {
-            "description" : "硬件过流",
-            "cause" : "1.输入指令与接通伺服同步或输入指令过快 2.制动电阻过小或短路 3.电机线缆接触不良4.电机线缆接地 5.电机UVW线缆短路 6.电机烧坏 7.增益设置不合理，电机振荡 8.编码器接线错误、老化腐蚀，编码器插头松动 9.驱动器故障",
-            "solution" : "系统错误，请联系技术支持工程师"
         }
     },
     {
@@ -172,13 +167,8 @@ alarm_servo_list = [
         "level": 0,
         "en": {
             "description" : "Flying Cars",
-            "cause" : "",
+            "cause" : "1. Error de cableado de secuencia de fase U V W 2. Al encender, la señal de interferencia causa el error de detección de fase inicial del rotor del motor 3. El modelo del codificador es incorrecto o un error de cableado 4. El cableado del codificador está suelto 5. La carga es demasiado grande",
             "solution" : "Please contact technical support engineer"
-        },
-        "zh_CN": {
-            "description" : "飞车",
-            "cause" : "1.U V W相序接线错误 2.上电时，干扰信号导致电机转子初始相位检测错误 3.编码器型号错误或接线错误 4.编码器接线松动 5.负载过大",
-            "solution" : "请联系技术支持工程师"
         }
     },
     {

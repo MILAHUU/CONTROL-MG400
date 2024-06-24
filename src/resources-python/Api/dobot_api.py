@@ -9,7 +9,7 @@ import json
 alarmControllerFile="files/alarm_controller.json"
 alarmServoFile="files/alarm_servo.json"
 
-# Port Feedback
+# Comentarios del puerto
 MyType=np.dtype([('len', np.int16, ), 
                 ('Reserve', np.int16, (3,) ),
                 ('digital_input_bits', np.int64, ), 
@@ -577,7 +577,7 @@ class DobotApiMove(DobotApi):
         return self.sendRecvMsg(string)
 
     def Jump(self):
-        print("待定")
+        print("indeterminado")
 
     def RelMovJ(self, x, y, z, r,*dynParams):
         """
@@ -629,17 +629,17 @@ class DobotApiMove(DobotApi):
 
     def MovJIO(self, x, y, z, r, *dynParams):
         """
-        Set the digital output port state in parallel during point-to-point motion
-        x: A number in the Cartesian coordinate system x
-        y: A number in the Cartesian coordinate system y
-        z: A number in the Cartesian coordinate system z
-        r: A number in the Cartesian coordinate system r
-        *dynParams :Parameter Settings（Mode、Distance、Index、Status)
-                    Mode :Set Distance mode (0: Distance percentage; 1: distance from starting point or target point)
-                    Distance :Runs the specified distance（If Mode is 0, the value ranges from 0 to 100；When Mode is 1, if the value is positive,
-                             it indicates the distance from the starting point. If the value of Distance is negative, it represents the Distance from the target point）
-                    Index ：Digital output index （Value range：1~24）
-                    Status ：Digital output state（Value range：0/1）
+        Establecer el estado del puerto de salida digital en paralelo durante el movimiento punto a punto
+        x: Un número en el sistema de coordenadas cartesianas x
+        y: Un número en el sistema de coordenadas cartesianas y
+        z: Un número en el sistema de coordenadas cartesianas z
+        r: Un número en el sistema de coordenadas cartesianas r
+        *dynParamsón de parámetros (Modo, Distancia, Índice, Estado)
+        Modo:el modo de distancia (0: Porcentaje de distancia; 1: distancia desde el punto de inicio o punto objetivo)
+        Distancia: la distancia especificada (Si el Modo es 0, el valor varía de 0 a 100; cuando el Modo es 1, si el valor es positivo,
+        indica la distancia desde el punto de inicio. Si el valor de Distancia es negativo, representa la distancia desde el punto objetivo)
+        Índice :Índice de salida digital (Rango de valores: 1 a 24)
+        Estado:de salida digital (Rango de valores: 0/1)
         """
         # example： MovJIO(0,50,0,0,0,0,(0,50,1,0),(1,1,2,1))
         string = "MovJIO({:f},{:f},{:f},{:f}".format(
@@ -653,10 +653,10 @@ class DobotApiMove(DobotApi):
 
     def Arc(self, x1, y1, z1, r1, x2, y2, z2, r2,*dynParams):
         """
-        Circular motion instruction
-        x1, y1, z1, r1 :Is the point value of intermediate point coordinates
-        x2, y2, z2, r2 :Is the value of the end point coordinates
-        Note: This instruction should be used together with other movement instructions
+        Instrucción de movimiento circular
+        x1, y1, z1, r1: Es el valor del punto de coordenadas del punto intermedio
+        x2, y2, z2, r2: Es el valor de las coordenadas del punto final
+        Nota: Esta instrucción debe ser utilizada junto con otras instrucciones de movimiento
         """
         string = "Arc({:f},{:f},{:f},{:f},{:f},{:f},{:f},{:f}".format(
             x1, y1, z1, r1, x2, y2, z2, r2)
@@ -668,11 +668,11 @@ class DobotApiMove(DobotApi):
 
     def Circle(self, x1, y1, z1, r1, x2, y2, z2, r2,count,*dynParams):
         """
-        Full circle motion command
-        count：Run laps
-        x1, y1, z1, r1 :Is the point value of intermediate point coordinates
-        x2, y2, z2, r2 :Is the value of the end point coordinates
-        Note: This instruction should be used together with other movement instructions
+        Comando de movimiento de círculo completo
+        count: Número de vueltas a realizar
+        x1, y1, z1, r1: Valor del punto de coordenadas del punto intermedio
+        x2, y2, z2, r2: Valor de las coordenadas del punto final
+        Nota: Esta instrucción debe utilizarse junto con otras instrucciones de movimiento
         """
         string = "Circle({:f},{:f},{:f},{:f},{:f},{:f},{:f},{:f},{:d}".format(
              x1, y1, z1, r1, x2, y2, z2, r2, count)
@@ -683,16 +683,16 @@ class DobotApiMove(DobotApi):
 
     def MoveJog(self, axis_id=None, *dynParams):
         """
-        Joint motion
-        axis_id: Joint motion axis, optional string value:
-            J1+ J2+ J3+ J4+ J5+ J6+
-            J1- J2- J3- J4- J5- J6- 
-            X+ Y+ Z+ Rx+ Ry+ Rz+ 
-            X- Y- Z- Rx- Ry- Rz-
-        *dynParams: Parameter Settings（coord_type, user_index, tool_index）
-                    coord_type: 1: User coordinate 2: tool coordinate (default value is 1)
-                    user_index: user index is 0 ~ 9 (default value is 0)
-                    tool_index: tool index is 0 ~ 9 (default value is 0)
+        Movimiento de articulación
+        axis_id: Eje de movimiento de articulación, valor opcional de cadena:
+        J1+ J2+ J3+ J4+ J5+ J6+
+        J1- J2- J3- J4- J5- J6-
+        X+ Y+ Z+ Rx+ Ry+ Rz+
+        X- Y- Z- Rx- Ry- Rz-
+        *dynParams: Configuración de parámetros (coord_type, user_index, tool_index)
+        coord_type: 1: Coordenada de usuario 2: Coordenada de herramienta (valor predeterminado es 1)
+        user_index: Índice de usuario de 0 a 9 (valor predeterminado es 0)
+        tool_index: Índice de herramienta de 0 a 9 (valor predeterminado es 0)
         """
         if axis_id is not None:
           string = "MoveJog({:s}".format(axis_id)
@@ -706,24 +706,25 @@ class DobotApiMove(DobotApi):
 
     def Sync(self):
         """
-        The blocking program executes the queue instruction and returns after all the queue instructions are executed
+        El programa de bloqueo ejecuta la instrucción de cola y regresa después de que todas las instrucciones de cola se ejecuten.
         """
         string = "Sync()"
         return self.sendRecvMsg(string)
 
     def RelMovJUser(self, offset_x, offset_y, offset_z, offset_r, user, *dynParams):
         """
-        The relative motion command is carried out along the user coordinate system, and the end motion mode is joint motion
-        offset_x: X-axis direction offset
-        offset_y: Y-axis direction offset
-        offset_z: Z-axis direction offset
-        offset_r: R-axis direction offset
+        "El comando de movimiento relativo se realiza a lo largo del sistema de coordenadas de usuario, y el modo de movimiento final es el movimiento de articulación
+        offset_x: Desplazamiento en la dirección del eje X
+        offset_y: Desplazamiento en la dirección del eje Y
+        offset_z: Desplazamiento en la dirección del eje Z
+        offset_r: Desplazamiento en la dirección del eje R
 
-        user: Select the calibrated user coordinate system, value range: 0 ~ 9
-        *dynParams: parameter Settings（speed_j, acc_j, tool）
-                    speed_j: Set joint speed scale, value range: 1 ~ 100
-                    acc_j: Set acceleration scale value, value range: 1 ~ 100
-                    tool: Set tool coordinate system index
+        user: Selecciona el sistema de coordenadas de usuario calibrado, rango de valores: 0 ~ 9
+        *dynParams: Configuración de parámetros (speed_j, acc_j, tool)
+                speed_j: Establece la escala de velocidad de articulación, rango de valores: 1 ~ 100
+                acc_j: Establece el valor de escala de aceleración, rango de valores: 1 ~ 100
+                tool: Establece el índice del sistema de coordenadas de la herramienta"
+
         """
         string = "RelMovJUser({:f},{:f},{:f},{:f}, {:d}".format(
             offset_x, offset_y, offset_z, offset_r, user)
@@ -734,16 +735,16 @@ class DobotApiMove(DobotApi):
 
     def RelMovLUser(self, offset_x, offset_y, offset_z, offset_r, user, *dynParams):
         """
-        The relative motion command is carried out along the user coordinate system, and the end motion mode is linear motion
-        offset_x: X-axis direction offset
-        offset_y: Y-axis direction offset
-        offset_z: Z-axis direction offset
-        offset_r: R-axis direction offset
-        user: Select the calibrated user coordinate system, value range: 0 ~ 9
-        *dynParams: parameter Settings（speed_l, acc_l, tool）
-                    speed_l: Set Cartesian speed scale, value range: 1 ~ 100
-                    acc_l: Set acceleration scale value, value range: 1 ~ 100
-                    tool: Set tool coordinate system index
+        El comando de movimiento relativo se lleva a cabo a lo largo del sistema de coordenadas de usuario, y el modo de movimiento final es el movimiento lineal.
+        offset_x: Desplazamiento en la dirección del eje X
+        offset_y: Desplazamiento en la dirección del eje Y
+        offset_z: Desplazamiento en la dirección del eje Z
+        offset_r: Desplazamiento en la dirección del eje R
+        user: Selecciona el sistema de coordenadas de usuario calibrado, rango de valores: 0 ~ 9
+        *dynParams: Configuración de parámetros (speed_l, acc_l, tool)
+        speed_l: Establece la escala de velocidad cartesiana, rango de valores: 1 ~ 100
+        acc_l: Establece el valor de escala de aceleración, rango de valores: 1 ~ 100
+        tool: Establece el índice del sistema de coordenadas de la herramienta
         """
         string = "RelMovLUser({:f},{:f},{:f},{:f}, {:d}".format(
             offset_x, offset_y, offset_z, offset_r, user)
@@ -754,12 +755,12 @@ class DobotApiMove(DobotApi):
 
     def RelJointMovJ(self, offset1, offset2, offset3, offset4, *dynParams):
         """
-        The relative motion command is carried out along the joint coordinate system of each axis, and the end motion mode is joint motion
-        Offset motion interface (point-to-point motion mode)
-        j1~j6:Point position values on each joint
-        *dynParams: parameter Settings（speed_j, acc_j, user）
-                    speed_j: Set Cartesian speed scale, value range: 1 ~ 100
-                    acc_j: Set acceleration scale value, value range: 1 ~ 100
+        El comando de movimiento relativo se realiza a lo largo del sistema de coordenadas de articulación de cada eje, y el modo de movimiento final es el movimiento de articulación.
+        Interfaz de movimiento de desplazamiento (modo de movimiento punto a punto)
+        j1~j6: Valores de posición de cada articulación
+        *dynParams: Configuración de parámetros (speed_j, acc_j, user)
+        speed_j: Establece la escala de velocidad de articulación, rango de valores: 1 ~ 100
+        acc_j: Establece el valor de escala de aceleración, rango de valores: 1 ~ 100
         """
         string = "RelJointMovJ({:f},{:f},{:f},{:f}".format(
             offset1, offset2, offset3, offset4)
