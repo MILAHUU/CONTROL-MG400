@@ -28,14 +28,20 @@ def main():
     root.title("Vista")
 
     # Centrar la ventana en la pantalla
-    window_width = 900
-    window_height = 850
+    window_width = 800
+    window_height = 600
     center_window(root, window_width, window_height)
 
     root.configure(bg='#b3cde0')  # Fondo azul medio
 
     # Construir la ruta al archivo de imagen de manera portátil
-    logo_path = os.path.join('src', 'resources-python', 'view', 'assets', 'images', 'Stem.png')
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    logo_path = os.path.join(script_dir, 'assets', 'images', 'Stem.png')
+    
+    # Verificar si el archivo existe
+    if not os.path.isfile(logo_path):
+        raise FileNotFoundError(f"No se encontró el archivo: {logo_path}")
+
     logo_image = Image.open(logo_path)
     logo_photo = ImageTk.PhotoImage(logo_image)
 

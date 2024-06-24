@@ -103,7 +103,7 @@ class RobotUI(object):
 
         # Enable/Disable(habilitar y desabilitar)
         self.button_enable = self.set_button(master=self.frame_dashboard,
-                                             text="Enable", rely=0.1, x=10, command=self.enable)
+                                             text="Encender", rely=0.1, x=10, command=self.enable)
         self.button_enable["width"] = 7
         self.global_state["enable"] = False
 

@@ -1,0 +1,724 @@
+[
+    {
+        "id": 0,
+        "level": 0,
+        "en": {
+            "description": "No error",
+            "cause" : "",
+            "solution": ""
+        }
+    },
+    {
+        "id": 25376,
+        "level": 0,
+        "en": {
+            "description": "Anomalías en los parámetros internos del servo",
+            "cause" : "1.El voltaje de la fuente de alimentación de control cayó instantáneamente 2. Fallo de energía instantáneo durante el almacenamiento de parámetros 3. El número de escrituras de parámetros dentro de un cierto período de tiempo excedió el valor máximo 4. El software se actualizó 5. Falla del servodrive",
+            "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 21120,
+        "level": 0,
+        "en": {
+            "description": "Fallos en la configuración de lógica programable",
+            "cause" : "1. Las versiones de software de FPGA y MCU no coinciden 2. Falla de FPGA",
+            "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 29953,
+        "level": 0,
+        "en": {
+            "description": "Versión de software de FPGA demasiado baja",
+            "cause" : "",
+            "solution": "Comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 29954,
+        "level": 0,
+        "en": {
+            "description": "Fallo de interrupción de lógica programable",
+            "cause" : "1. Falla de FPGA 2. Comunicación de protocolo de enlace anormal entre FPGA y MCU 3. Tiempo de espera de operación interna del controlador",
+            "solution": "Si al conectar la energía varias veces, la alarma sigue apareciendo, reemplace el drive"
+        }
+    },
+    {
+        "id": 25377,
+        "level": 0,
+        "en": {
+            "description": "Excepciones de programa interno",
+            "cause" : "1. Fallo de EEPROM 2. Fallo del servodrive",
+            "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 21808,
+        "level": 0,
+        "en": {
+            "description": "Fallo en el almacenamiento de parámetros",
+            "cause" : "1. Se produce una excepción al escribir parámetros. 2. Se produce una anomalía al leer los parámetros.",
+            "solution": "Restablezca el parámetro y vuelva a encender, o comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 28962,
+        "level": 0,
+        "en": {
+            "description": "Fallos en la coincidencia del producto",
+            "cause" : "1. El número de producto (motor o controlador) no existe 2. El nivel de potencia del motor y del controlador no coincide",
+            "solution": "1. Verifique si el parámetro del motor coincide con el modelo de motor en la placa de identificación; 2. Verifique si el motor y el controlador coinciden, de lo contrario, seleccione el motor y controlador correctos"
+        }
+    },
+    {
+        "id": 21574,
+        "level": 0,
+        "en": {
+            "description": "Fallo de comando de encendido del servo inválido",
+            "cause" : "",
+            "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 28964,
+        "level": 0,
+        "en": {
+            "description": "Fallo en la coincidencia del producto en modo de posición absoluta",
+            "cause" : "",
+            "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 25378,
+        "level": 0,
+        "en": {
+            "description": "Asignación repetida de funciones DI",
+            "cause" : "1. Al asignar funciones DI, la misma función se asigna repetidamente a múltiples terminales DI. 2. El número de función DI excede el número de funciones DI. 3. La función DI no es compatible.",
+            "solution": "1. Verifique si la misma función se asigna a diferentes DI; 2. Confirme si el MCU correspondiente admite la funcionalidad asignada"
+        }
+    },
+    {
+        "id": 25379,
+        "level": 0,
+        "en": {
+            "description": "Sobrecarga en la asignación de funciones DO",
+            "cause" : "1. El controlador tiene una anomalía 2. El cable de comunicación tiene mal contacto o está desconectado 3. El cable de comunicación no está conectado a tierra o está mal conectado a tierra",
+            "solution": "Verifique si el motor y el circuito están funcionando correctamente, o comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 29488,
+        "level": 0,
+        "en": {
+            "description": "Los datos en la ROM del codificador del motor se verifican incorrectamente o los parámetros no se almacenan",
+            "cause" : "",
+            "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 8752,
+        "level": 0,
+        "en": {
+            "description": "Sobrecorriente de hardware",
+            "cause" : "1. El comando de entrada está sincronizado con el encendido del servo o el comando de entrada es demasiado rápido 2. La resistencia de frenado es demasiado pequeña o está en cortocircuito 3. El cable del motor tiene mal contacto 4. El cable del motor está conectado a tierra 5. El cable UVW del motor está en cortocircuito 6. El motor está quemado 7. Configuración de ganancia irrazonable, oscilación del motor 8. Error de cableado del codificador, envejecimiento y corrosión, enchufe del codificador suelto 9. Fallo del controlador",
+            "solution" : "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 8977,
+        "level": 0,
+        "en": {
+            "description": "Fallo de sobrecarga de corriente del eje DQ",
+            "cause" : "",
+            "solution" : "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 65288,
+        "level": 0,
+        "en": {
+            "description": "Tiempo de espera de operación de muestreo del sistema FPGA",
+            "cause" : "",
+            "solution" : "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 9024,
+        "level": 0,
+        "en": {
+            "description": "Salida en cortocircuito a tierra",
+            "cause" : "1. El cable de alimentación del controlador (U V W) está en cortocircuito a tierra. 2. El motor está en cortocircuito a tierra. 3. El controlador está defectuoso.",
+            "solution": "Comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 13184,
+        "level": 0,
+        "en": {
+            "description": "Error en la secuencia de fases UVW",
+            "cause" : "La secuencia de fases U V W del motor no se corresponde con la secuencia de fases U V W del controlador.",
+            "solution" : "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+        {
+        "id": 33922,
+        "level": 0,
+        "en": {
+            "description": "Flying Cars",
+            "cause" : "1. Cableado de secuencia de fases U V W incorrecto 2. Al encender, las señales de interferencia causan errores de detección de fase inicial del rotor del motor 3. Modelo de codificador incorrecto o cableado incorrecto 4. Cableado del codificador suelto 5. Carga excesiva",
+            "solution": "Comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 12816,
+        "level": 0,
+        "en": {
+            "description": "Sobretensión eléctrica en el circuito principal",
+            "cause" : "1. El nivel de voltaje de entrada es incorrecto 2. La resistencia de frenado falla 3. La resistencia de frenado es demasiado grande y absorbe energía demasiado lentamente",
+            "solution" : "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+        {
+        "id": 12832,
+        "level": 0,
+        "en": {
+            "description": "Bajo voltaje del circuito principal",
+            "cause" : "1. El voltaje de la fuente de alimentación de entrada es inestable o pierde energía. 2. El voltaje cae significativamente durante la aceleración rápida. 3. El servocontrolador está defectuoso.",
+            "solution" : "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+        }
+    },
+    {
+        "id": 12592,
+        "level": 0,
+        "en": {
+            "description": "Cortocircuito eléctrico en el circuito principal",
+            "cause" : "1. A la fuente de alimentación de entrada R S T le faltan 2 fases 2. El controlador está dañado",
+            "solution": "Verifique la conexión del cable de alimentación, de lo contrario, reemplace el controlador"
+        }
+    },    
+        {
+            "id": 12576,
+            "level": 0,
+            "en": {
+                "description": "Control de baja tensión eléctrica",
+                "cause" : "1. La fuente de alimentación de control es inestable o pierde energía. 2. El cable de control tiene mal contacto.",
+                "solution": "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 33920,
+            "level": 0,
+            "en": {
+                "description": "Exceso de velocidad",
+                "cause" : "1. El cableado de secuencia de fases U V W es incorrecto. 2. El umbral de evaluación de falla por exceso de velocidad está configurado demasiado pequeño. 3. La velocidad del motor se excede. 4. El controlador está dañado.",
+                "solution": "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 65296,
+            "level": 0,
+            "en": {
+                "description": "Sobrespeed en la salida de pulsos",
+                "cause" : "",
+                "solution" : "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 65282,
+            "level": 0,
+            "en": {
+                "description": "Fallo en la identificación de ángulos",
+                "cause" : "Falló la calibración cero del codificador del motor",
+                "solution" : "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 9040,
+            "level": 0,
+            "en": {
+                "description": "Sobrecarga del variador",
+                "cause" : "La potencia del motor y del controlador no coinciden",
+                "solution": "Reemplace el variador"
+            }
+        },
+        {
+            "id": 29056,
+            "level": 0,
+            "en": {
+                "description": "Sobrecarga del motor",
+                "cause" : "1. La carga es demasiado pesada, el par real excede el par nominal y la máquina continúa funcionando durante mucho tiempo. 2. Un ajuste de ganancia inadecuado provoca vibraciones y movimientos de balanceo. El motor vibra y hace ruidos extraños. 3. El cableado del motor está incorrecto o desconectado. 4. La máquina sufre una colisión, de repente se vuelve más pesada y se deforma. 5. Cuando el freno no está abierto, el motor funciona. 6. En el cableado de varias máquinas, los cables del motor están conectados erróneamente a otros ejes y el cableado es incorrecto.",
+                "solution" : "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 28961,
+            "level": 0,
+            "en": {
+                "description": "Protección contra sobrecalentamiento para motores bloqueados",
+                "cause" : "1. El motor está atascado mecánicamente. 2. La salida U V W del controlador tiene una pérdida de fase o una secuencia de fases incorrecta.",
+                "solution": "Verifique si el hardware está funcionando correctamente, o contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 17168,
+            "level": 0,
+            "en": {
+                "description": "Sobrecalentamiento del radiador",
+                "cause" : "1. La temperatura ambiente es demasiado alta 2. El ventilador del variador está dañado 3. El servovariador tiene una falla interna",
+                "solution": "Reduzca la temperatura ambiente, o contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29571,
+            "level": 0,
+            "en": {
+                "description": "Fallo de batería del codificador",
+                "cause" : "1. Durante el corte de energía, el codificador no está conectado a la batería. 2. El voltaje de la batería del codificador es demasiado bajo.",
+                "solution": "Conecte la batería, o contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29490,
+            "level": 0,
+            "en": {
+                "description": "Error de recuento multi-giro del codificador",
+                "cause" : "Fallo del codificador",
+                "solution": "Reemplace el motor"
+            }
+        },
+        {
+            "id": 29491,
+            "level": 0,
+            "en": {
+                "description": "Desbordamiento de recuento multi-giro del codificador",
+                "cause" : "",
+                "solution" : "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29492,
+            "level": 0,
+            "en": {
+                "description": "Interferencia del codificador",
+                "cause" : "La señal Z del codificador multiplica la interferencia, lo que hace que el ángulo correspondiente de la señal Z cambie demasiado.",
+                "solution": "Error del sistema, por favor contacte a un ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29493,
+            "level": 0,
+            "es": {
+                "description": "Fallo en la escala del codificador externo",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29494,
+            "level": 0,
+            "es": {
+                "description": "Anomalías en los datos del codificador",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29495,
+            "level": 0,
+            "es": {
+                "description": "Excepción en el checksum del retorno del codificador",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29496,
+            "level": 0,
+            "es": {
+                "description": "Pérdida de la señal Z del codificador",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 34321,
+            "level": 0,
+            "es": {
+                "description": "Desviación excesiva de posición",
+                "cause": "1. El motor no gira 2. La ganancia del controlador es demasiado pequeña 3. H0A.08 está configurado demasiado pequeño en relación con las condiciones de funcionamiento",
+                "solution": "Verifique si el motor está funcionando correctamente o contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 34322,
+            "level": 0,
+            "es": {
+                "description": "Comando de posición demasiado grande",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 34323,
+            "level": 0,
+            "es": {
+                "description": "Desviación excesiva de posición del bucle cerrado completo",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25380,
+            "level": 0,
+            "es": {
+                "description": "Desbordamiento en la configuración del engranaje electrónico",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25381,
+            "level": 0,
+            "es": {
+                "description": "Configuración incorrecta de parámetros para la función de bucle cerrado completo",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25382,
+            "level": 0,
+            "es": {
+                "description": "Límites superiores e inferiores de posición del software configurados incorrectamente",
+                "cause": "El valor establecido en el diccionario de objetos 0x607D-01h es menor que el valor 0x607D-02h",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25383,
+            "level": 0,
+            "es": {
+                "description": "Configuración incorrecta del desplazamiento de la posición de origen",
+                "cause": "El valor de desplazamiento del origen está fuera de los límites superior e inferior de la posición del software.",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },        
+        {
+            "id": 30083,
+            "level": 0,
+            "es": {
+                "description": "Pérdida de sincronización",
+                "cause": "Durante la comunicación síncrona, se pierde la señal de sincronización de la estación maestra",
+                "solution": "Error del sistema, comuníquese con el ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 30081,
+            "level": 0,
+            "es": {
+                "description": "Archivo de configuración XML no grabado",
+                "cause": "Archivo de configuración del dispositivo no grabado",
+                "solution": "Grabe el archivo de configuración XML"
+            }
+        },
+        {
+            "id": 65298,
+            "level": 0,
+            "es": {
+                "description": "Fallo en la inicialización de la red",
+                "cause": "Archivo de configuración del dispositivo no grabado",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 30082,
+            "level": 0,
+            "es": {
+                "description": "Error en la configuración del ciclo de sincronización",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 30084,
+            "level": 0,
+            "es": {
+                "description": "Error en el período excesivo de sincronización",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25384,
+            "level": 0,
+            "es": {
+                "description": "Fallo en la configuración de salida de pulsos de cruce",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 65521,
+            "level": 0,
+            "es": {
+                "description": "Fallo de tiempo de retorno a cero",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29570,
+            "level": 0,
+            "es": {
+                "description": "Advertencia de batería del codificador",
+                "cause": "El voltaje de la batería es inferior a 3,0 V.",
+                "solution": "Reemplace la batería"
+            }
+        },
+        {
+            "id": 21570,
+            "level": 0,
+            "es": {
+                "description": "Freno de emergencia DI",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 12851,
+            "level": 0,
+            "es": {
+                "description": "Advertencia de sobrecarga del motor",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 12817,
+            "level": 0,
+            "es": {
+                "description": "Alarma de sobrecarga del resistor de freno",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25385,
+            "level": 0,
+            "es": {
+                "description": "Resistor de freno externo demasiado pequeño",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 13105,
+            "level": 0,
+            "es": {
+                "description": "Desconexión del cable de alimentación del motor",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 25386,
+            "level": 0,
+            "es": {
+                "description": "El cambio de parámetros requiere repotenciación para que tenga efecto",
+                "cause": "Los parámetros modificados son parámetros que entran en vigor después del apagado.",
+                "solution": "Elimine la alarma y encienda de nuevo"
+            }
+        },
+        {
+            "id": 30208,
+            "level": 0,
+            "es": {
+                "description": "Almacenamiento frecuente de parámetros",
+                "cause": "El sistema informático host cambia repetidamente los parámetros",
+                "solution": "Verifique si el ordenador superior está funcionando normalmente o contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 21571,
+            "level": 0,
+            "es": {
+                "description": "Advertencia de sobrecarrera hacia adelante",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 21572,
+            "level": 0,
+            "es": {
+                "description": "Advertencia de sobrecarrera hacia atrás",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29569,
+            "level": 0,
+            "es": {
+                "description": "Fallo interno del codificador",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 12597,
+            "level": 0,
+            "es": {
+                "description": "Advertencia de falla de fase de entrada",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 65432,
+            "level": 0,
+            "es": {
+                "description": "Error en la configuración del modo de retorno a cero",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 65344,
+            "level": 0,
+            "es": {
+                "description": "Fallo en el reconocimiento de parámetros",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },        
+        {
+            "id": 21121,
+            "level": 0,
+            "es": {
+                "description": "Error interno",
+                "cause": "Reinicio del perro guardián",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29956,
+            "level": 0,
+            "es": {
+                "description": "Error de configuración FPGA",
+                "cause": "La inicialización de FPGA falló",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 51020,
+            "level": 0,
+            "es": {
+                "description": "Error de identificación de placa de controlador",
+                "cause": "Error de ID de energía",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29568,
+            "level": 0,
+            "es": {
+                "description": "Error de conexión del codificador",
+                "cause": "1. El enchufe del codificador está suelto 2. El tipo de codificador está configurado incorrectamente 3. El codificador del motor está dañado 4. El controlador está defectuoso",
+                "solution": "Revise la conexión del cable del codificador o contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 8992,
+            "level": 0,
+            "es": {
+                "description": "Sobrecorriente de software",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 9088,
+            "level": 0,
+            "es": {
+                "description": "Punto cero actual demasiado grande",
+                "cause": "Falló el arranque del módulo de muestreo actual",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 30080,
+            "level": 0,
+            "es": {
+                "description": "Fallo de comunicación EtherCAT",
+                "cause": "Comunicación EtherCAT desconectada",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 33921,
+            "level": 0,
+            "es": {
+                "description": "Error de seguimiento de velocidad excesiva",
+                "cause": "1. El motor está calado 2. La salida UVW está desconectada 3. La salida de torsión es limitada 4. El ajuste de ganancia del controlador es demasiado pequeño 5. El controlador o el motor están dañados",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 21120,
+            "level": 0,
+            "es": {
+                "description": "Advertencia de STO",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 21569,
+            "level": 0,
+            "es": {
+                "description": "Fallo de conexión entre la placa superior e inferior",
+                "cause": "Conexión anormal entre el tablero de servocontrol y el tablero de transmisión",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 8980,
+            "level": 0,
+            "es": {
+                "description": "Sobrecorriente del barraje",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 17169,
+            "level": 0,
+            "es": {
+                "description": "Resistencias de medición de temperatura dañadas o no instaladas",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 29572,
+            "level": 0,
+            "es": {
+                "description": "Fallo de lectura de EEPROM del codificador",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        },
+        {
+            "id": 12928,
+            "level": 0,
+            "es": {
+                "description": "Fallas en la coincidencia de potencia del servo y el motor",
+                "cause": "",
+                "solution": "Error del sistema, por favor contacte al ingeniero de soporte técnico"
+            }
+        }        
+    
+
+]
