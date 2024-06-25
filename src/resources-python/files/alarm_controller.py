@@ -723,7 +723,7 @@ alarm_controller_list =[
       "id": 20480,
       "level": 5,
       "en": {
-          "description": "AUX Joint1 exceeds positive limit",
+          "description": "AUX articulacion 1 excede el límite positivo",
           "cause": "",
           "solution": "Avance inverso fuera del límite"
         }
@@ -732,7 +732,7 @@ alarm_controller_list =[
       "id": 20481,
       "level": 5,
       "en": {
-          "description": "AUX Joint1 exceeds negative limit",
+          "description": "AUX articulacion 1 excede el límite negativo",
           "cause": "",
           "solution": "Avance inverso fuera del límite"
         }
@@ -741,637 +741,637 @@ alarm_controller_list =[
       "id": 20482,
       "level": 5,
       "en": {
-          "description": "AUX Joint1 communication failed",
+          "description": "AUX articulacion 1 fallo la comunicacion",
           "cause": "",
-          "solution": "Check if the communication of AUX joint 1 is normal and then clear the error"
+          "solution": "Verifique si la comunicación de la articulación AUX 1 es normal y luego borre el error"
         }
   },
   {
     "id": 20483,
       "level": 5,
       "en": {
-          "description": "AUX Joint1 position out of working area",
+          "description": "Posición de la articulación AUX 1 fuera del área de trabajo",
           "cause": "",
-          "solution": "Reselect movement points"
+          "solution": "Vuelva a seleccionar los puntos de movimiento"
         }
   },
   {
     "id": 20484,
     "level": 0,
     "en": {
-          "description": "AUX Joint1 emergency stop button press",
+          "description": "Botón de parada de emergencia de la articulación AUX 1 presionado",
           "cause": "",
-          "solution": "release the hardware emergency stop button"
+          "solution": "Libere el botón de parada de emergencia del hardware"
         }
   },
   {
       "id": 33024,
       "level": 5,
       "en": {
-          "description": "No input parameters for CP instruction",
+          "description": "No hay parámetros de entrada para la instrucción CP",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 33025,
       "level": 5,
       "en": {
-          "description": "Input parameters of CP instruction out of range",
+          "description": "Los parámetros de entrada de la instrucción CP están fuera del rango",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 33280,
       "level": 5,
       "en": {
-          "description": "No input parameters for Arch instruction",
+          "description": "No hay parámetros de entrada para la instrucción Arch.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 33281,
       "level": 5,
       "en": {
-          "description": "Index parameter of Arch instruction out of range",
+          "description": "El parámetro de índice de la instrucción Arch está fuera de rango.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 33282,
       "level": 5,
       "en": {
-          "description": "Index parameter of Arch instruction not configured yet",
+          "description": "El parámetro de índice de la instrucción Arch no está configurado todavía.",
           "cause": "",
-          "solution": "Please set index parameters"
+          "solution": "Por favor configure los parámetros de índice."
         }
   },
   {
       "id": 33536,
       "level": 5,
       "en": {
-          "description": "No input parameters for LimZ instruction",
+          "description": "No hay parámetros de entrada para la instrucción LimZ.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 33537,
       "level": 5,
       "en": {
-        "description": "Input parameters of LimZ instruction out of range",
+        "description": "Los parámetros de entrada de la instrucción LimZ están fuera de rango.",
         "cause": "",
-        "solution": "Enter the correct parameters"
+        "solution": "Ingrese los parámetros correctos"
       }
   },
   {
       "id": 33792,
       "level": 5,
       "en": {
-          "description": "No input parameters for Speed instruction",
+          "description": "No hay parámetros de entrada para la instrucción de velocidad.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 33793,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of Speed instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción de velocidad está fuera del rango [1, 100]",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 34048,
       "level": 5,
       "en": {
-          "description": "No input parameters for Accel instruction",
+          "description": "No hay parámetros de entrada para la instrucción de aceleración.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 34049,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of Accel instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción de aceleración está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 34304,
       "level": 5,
       "en": {
-          "description": "No input parameters for Jerk instruction",
+          "description": "No hay parámetros de entrada para la instrucción de jerk.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 34305,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of Jerk instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción de jerk está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 34560,
       "level": 5,
       "en": {
-          "description": "No input parameters for SpeedS instruction",
+          "description": "No hay parámetros de entrada para la instrucción SpeedS.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 34561,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of SpeedS instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción SpeedS está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 34816,
       "level": 5,
       "en": {
-          "description": "No input parameters for SpeedR instruction",
+          "description": "No hay parámetros de entrada para la instrucción SpeedR.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 34817,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of SpeedR instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción SpeedR está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 35072,
       "level": 5,
       "en": {
-          "description": "No input parameters for AccelS instruction",
+          "description": "No hay parámetros de entrada para la instrucción AccelS.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 35073,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of AccelS instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción AccelS está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 35328,
       "level": 5,
       "en": {
-          "description": "No input parameters for AccelR instruction",
+          "description": "No hay parámetros de entrada para la instrucción AccelR.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 35329,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of AccelR instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción AccelR está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 35584,
       "level": 5,
       "en": {
-          "description": "No input parameters for JerkS instruction",
+          "description": "No hay parámetros de entrada para la instrucción JerkS.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 35585,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of JerkS instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción JerkS está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 35840,
       "level": 5,
       "en": {
-          "description": "No input parameters for JerkR instruction",
+          "description": "No hay parámetros de entrada para la instrucción JerkR.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 35841,
       "level": 5,
       "en": {
-          "description": "Ratio parameter of JerkR instruction out of range [1, 100]",
+          "description": "El parámetro de proporción de la instrucción JerkR está fuera del rango [1, 100].",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36096,
       "level": 5,
       "en": {
-          "description": "No input parameters for Go instruction",
+          "description": "No hay parámetros de entrada para la instrucción Go.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36097,
       "level": 5,
       "en": {
-          "description": "No motion point parameter for Go instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción Go.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36098,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for Go instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción Go.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36099,
       "level": 5,
       "en": {
-          "description": "Incorrect control parameter for Go instruction",
+          "description": "Parámetro de control incorrecto para la instrucción Go.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36352,
       "level": 5,
       "en": {
-          "description": "No input parameters for Move instruction",
+          "description": "No hay parámetros de entrada para la instrucción Move.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36353,
       "level": 5,
       "en": {
-          "description": "No motion point parameter for Move instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción Move.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36354,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for Move instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción Move.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36355,
       "level": 5,
       "en": {
-          "description": "Incorrect control parameter for Move instruction",
+          "description": "Parámetro de control incorrecto para la instrucción Move.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36608,
       "level": 5,
       "en": {
-          "description": "No input parameters for Arch3 instruction",
+          "description": "No hay parámetros de entrada para la instrucción Arch3.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36609,
       "level": 5,
       "en": {
-          "description": "No motion point parameter for Arch3 instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción Arch3.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36610,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for Arch3 instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción Arch3.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36611,
       "level": 5,
       "en": {
-          "description": "Incorrect control parameter for Arch3 instruction",
+          "description": "Parámetro de control incorrecto para la instrucción Arch3.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36864,
       "level": 5,
       "en": {
-          "description": "No input parameters for Jump instruction",
+          "description": "No hay parámetros de entrada para la instrucción Jump.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36865,
       "level": 5,
       "en": {
-          "description": "No motion point parameter for Jump instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción Jump.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
   },
   {
       "id": 36866,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for Jump instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción Jump.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36867,
       "level": 5,
       "en": {
-          "description": "Incorrect control parameter for Jump instruction",
+          "description": "Parámetro de control incorrecto para la instrucción Jump.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
     "id": 40960,
     "level": 5,
     "en": {
-          "description": "No input parameters for Circle3 instruction",
+          "description": "No hay parámetros de entrada para la instrucción Circle 3.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
       },
       {
         "id": 40961,
         "level": 5,
         "en": {
-          "description": "No motion point parameter for Circle3 instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción Circle 3.",
           "cause": "",
-          "solution": "Please enter parameters"
+          "solution": "Por favor ingrese los parámetros"
         }
       },
       {
         "id": 40962,
         "level": 5,
         "en": {
-          "description": "Incorrect motion point for Circle3 instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción Circle 3.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
         "id": 40963,
         "level": 5,
         "en": {
-          "description": "Incorrect control parameter for Circle3 instruction",
+          "description": "Parámetro de control incorrecto para la instrucción Circle 3.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45056,
       "level": 5,
       "en": {
-          "description": "Circle3 Option Error",
+          "description": "Error de opción en Circle 3.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45057,
       "level": 5,
       "en": {
-          "description": "Jump  Option Error",
+          "description": "Error de opción en Jump.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45058,
       "level": 5,
       "en": {
-          "description": "Arch Option Error",
+          "description": "Error de opción en Arch.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45059,
       "level": 5,
       "en": {
-          "description": "Arch3 Option Error",
+          "description": "Error de opción en Arch 3.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45060,
       "level": 5,
       "en": {
-          "description": "Jerk Option Error",
+          "description": "Error de opción en Jerk.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45061,
       "level": 5,
       "en": {
-          "description": "JerkR Option Error",
+          "description": "Error de opción en JerkR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45062,
       "level": 5,
       "en": {
-          "description": "JerkS Option Error",
+          "description": "Error de opción en JerkS.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45063,
       "level": 5,
       "en": {
-          "description": "Accel Option Error",
+          "description": "Error de opción en Accel.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45064,
       "level": 5,
       "en": {
-          "description": "AccelR Option Error",
+          "description": "Error de opción en AccelR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45065,
       "level": 5,
       "en": {
-          "description": "AccelS Option Error",
+          "description": "Error de opción en AccelS.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45066,
       "level": 5,
       "en": {
-          "description": "SpeedFactor Option Error",
+          "description": "Error de opción en SpeedFactor.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45067,
       "level": 5,
       "en": {
-          "description": "Speed Option Error",
+          "description": "Error de opción en Speed.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45068,
       "level": 5,
       "en": {
-          "description": "SpeedR Option Error",
+          "description": "Error de opción en SpeedR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45069,
       "level": 5,
       "en": {
-          "description": "Limz Option Error",
+          "description": "Error de opción en Limz.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 45070,
       "level": 5,
       "en": {
-          "description": "CP Option Error",
+          "description": "Error de opción en CP.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45071,
       "level": 5,
       "en": {
-          "description": "DO Option Error",
+          "description": "Error de opción en DO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45072,
       "level": 5,
       "en": {
-          "description": "Go Option Error",
+          "description": "Error de opción en Go.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45073,
       "level": 5,
       "en": {
-          "description": "Move Option Error",
+          "description": "Error de opción en Move.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45074,
       "level": 5,
       "en": {
-          "description": "MoveJ Option Error",
+          "description": "Error de opción en MoveJ.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45075,
       "level": 5,
       "en": {
-          "description": "Ecp Option  Error",
+          "description": "Error de opción en Ecp.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45076,
       "level": 5,
       "en": {
-          "description": "EcpSet Option Error",
+          "description": "Error de opción en EcpSet",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45077,
       "level": 5,
       "en": {
-          "description": "SetExicitMode Option Error",
+          "description": "Error de opción en SetExciteMode",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 106,
       "level": 5,
       "en": {
-          "description": "Conveyor tracking stop failed Error",
+          "description": "Error al detener el seguimiento del transportador",
           "cause": "",
           "solution": "Error interno, reinicio o contacto con el fabricante"
         }
@@ -1380,7 +1380,7 @@ alarm_controller_list =[
       "id": 107,
       "level": 5,
       "en": {
-          "description": "Conveyor tracking synchronization failed Error",
+          "description": "Error de sincronización en el seguimiento del transportador",
           "cause": "",
           "solution": "Error interno, reinicio o contacto con el fabricante"
         }
@@ -1389,450 +1389,450 @@ alarm_controller_list =[
       "id": 32768,
       "level": 5,
       "en": {
-          "description": "No input parameters for speedFactor instruction",
+          "description": "No hay parámetros de entrada para la instrucción speedFactor.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 32769,
       "level": 5,
       "en": {
-          "description": "Input parameters of speedFactor instruction out of range",
+          "description": "Los parámetros de entrada de la instrucción speedFactor están fuera del rango permitido.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 32770,
       "level": 5,
       "en": {
-          "description": "DO input parameters Error",
+          "description": "Error en los parámetros de entrada de DO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 32771,
       "level": 5,
       "en": {
-          "description": "DI input parameters Error",
+          "description": "Error en los parámetros de entrada de DI.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
       {
       "id": 32776,
       "level": 5,
       "en": {
-          "description": "DOGroup params number err",
+          "description": "Error en el número de parámetros de DOGroup.",
           "cause": "",
-          "solution": "params is too much"
+          "solution": "Demasiados parámetros."
         }
       },
       {
       "id": 32777,
       "level": 5,
       "en": {
-          "description": "DOGroup have some params's index out of range",
+          "description": "Algunos índices de parámetros en DOGroup están fuera de rango.",
           "cause": "",
-          "solution": "input correct params"
+          "solution": "Ingrese los parámetros correctos."
         }
       },
       {
       "id": 32778,
       "level": 5,
       "en": {
-          "description": "DOGroup have some params's index type error",
+          "description": "Error de tipo de índice en algunos parámetros de DOGroup.",
           "cause": "",
-          "solution": "input correct params"
+          "solution": "Ingrese los parámetros correctos."
         }
       },
       {
       "id": 32779,
       "level": 5,
       "en": {
-          "description": "DOGroup have some params's value type error",
+          "description": "Error de tipo de valor en algunos parámetros de DOGroup.",
           "cause": "",
-          "solution": "input correct params,number type and boolean is needed eg.(0/1) || (true/false) || (ON/OFF)"
+          "solution": "Por favor ingrese los parámetros correctos. Se necesita un tipo de número y booleano, por ejemplo (0/1), (true/false), (ON/OFF)."
         }
       },
       {
       "id": 32780,
       "level": 5,
       "en": {
-          "description": "DOGroup have some params's isqueue type error",
+          "description": "Error de tipo 'isqueue' en algunos parámetros de DOGroup.",
           "cause": "",
-          "solution": "eg.(0/1) || (true/false) || (ON/OFF) . true means queue command(default),false:Immediate command"
+          "solution": "Por ejemplo, (0/1) || (true/false) || (ON/OFF).true significa comando en cola (por defecto),false significa comando inmediato."
         }
       },
   {
       "id": 32781,
       "level": 5,
       "en": {
-          "description": "DOGroup err internal ",
+          "description": "Error interno en DOGroup.",
           "cause": "",
-          "solution": "internal error has happend,try again."
+          "solution": "Se ha producido un error interno. Intente nuevamente."
         }
       },
   {
       "id": 36100,
       "level": 5,
       "en": {
-          "description": "No input parameters for movej instruction",
+          "description": "No hay parámetros de entrada para la instrucción movej.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36101,
       "level": 5,
       "en": {
-          "description": "No motion point parameter for  movej instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción movej.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36102,
       "level": 5,
       "en": {
-          "description": "No motion point parameter for  movej instruction",
+          "description": "No hay parámetros de punto de movimiento para la instrucción movej.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36103,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for  RP instruction",
+          "description": "El punto de movimiento es incorrecto para la instrucción RP.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36104,
       "level": 5,
       "en": {
-          "description": "Incorrect offset for  RP instruction",
+          "description": "Desplazamiento incorrecto para la instrucción RP.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36105,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for  RJ instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción RJ.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36106,
       "level": 5,
       "en": {
-          "description": "Incorrect offset for  RJ instruction",
+          "description": "Desplazamiento incorrecto para la instrucción RJ.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36107,
       "level": 5,
       "en": {
-          "description": "No input parameters for GoR instruction",
+          "description": "No hay parámetros de entrada para la instrucción GoR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36108,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for  GoR instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción GoR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36109,
       "level": 5,
       "en": {
-          "description": "No input parameters for MoveJR instruction",
+          "description": "No hay parámetros de entrada para la instrucción MoveJR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       },
   {
       "id": 36110,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for  MoveJR instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción MoveJR.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36121,
       "level": 5,
       "en": {
-          "description": "RP Inverse kinematics error with no solution",
+          "description": "Error de cinemática inversa en RP sin solución.",
           "cause": "",
-          "solution": "Reselect movement points"
+          "solution": "Vuelva a seleccionar los puntos de movimiento."
         }
   },
   {
       "id": 36122,
       "level": 5,
       "en": {
-          "description": "RP Inverse kinematics error with result out of working area",
+          "description": "Error de cinemática inversa en RP: el resultado está fuera del área de trabajo.",
           "cause": "",
-          "solution": "Reselect movement points"
+          "solution": "Vuelva a seleccionar los puntos de movimiento."
         }
   },
   {
       "id": 45079,
       "level": 5,
       "en": {
-          "description": "loadSwitch Option Error",
+          "description": "Error de opción en loadSwitch.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
     "id": 45080,
     "level": 5,
     "en": {
-          "description": "loadSet Options Error",
+          "description": "Error de opciones en loadSet.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45081,
       "level": 5,
       "en": {
-          "description": "CPParamErrorOption",
+          "description": "Error de opción de parámetro CP.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45082,
       "level": 5,
       "en": {
-          "description": "TOOLParamErrorOption",
+          "description": "Error de opción de parámetro TOOL.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45083,
       "level": 5,
       "en": {
-          "description": "USERParamErrorOption",
+          "description": "Error de opción de parámetro USER.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45084,
       "level": 5,
       "en": {
-          "description": "SPEEDParamErrorOption",
+          "description": "Error de opción de parámetro SPEED.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45085,
       "level": 5,
       "en": {
-          "description": "SPEEDSParamErrorOption",
+          "description": "Error de opción de parámetro SPEEDS.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45086,
       "level": 5,
       "en": {
-          "description": "ACCELParamErrorOption",
+          "description": "Error de opción de parámetro ACCEL.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45087,
       "level": 5,
       "en": {
-          "description": "ACCELSParamErrorOption",
+          "description": "Error de opción de parámetro ACCELS.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45088,
       "level": 5,
       "en": {
-          "description": "ARCHParamErrorOption",
+          "description": "Error de opción de parámetro ARCH.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45089,
       "level": 5,
       "en": {
-          "description": "STARTParamErrorOption",
+          "description": "Error de opción de parámetro START.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45090,
       "level": 5,
       "en": {
-          "description": "ZLIMITParamErrorOption",
+          "description": "Error de opción de parámetro ZLIMIT.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45091,
       "level": 5,
       "en": {
-          "description": "ENDParamErrorOption",
+          "description": "Error de opción de parámetro END.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45092,
       "level": 5,
       "en": {
-          "description": "SYNCaramErrorOption",
+          "description": "Error de opción de parámetro SYNC.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45093,
       "level": 5,
       "en": {
-          "description": "ARMParamErrorOption",
+          "description": "Error de opción de parámetro ARM.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45312,
       "level": 5,
       "en": {
-          "description": "loadSwitch Option Error",
+          "description": "Error de opción en loadSwitch.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 45313,
       "level": 5,
       "en": {
-          "description": "loadSet Options Error",
+          "description": "Error de opciones en loadSet.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 49152,
       "level": 5,
       "en": {
-          "description": "Enable remote control when enabled",
+          "description": "Activar el control remoto cuando esté habilitado.",
           "cause": "",
-          "solution": "Next enable and then switch"
+          "solution": "Activar después cambiar."
         }
   },
   {
       "id": 36111,
       "level": 5,
       "en": {
-          "description": "No input parameters for GoIO instruction",
+          "description": "No hay parámetros de entrada para la instrucción GoIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36112,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for GoIO instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción GoIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36113,
       "level": 5,
       "en": {
-          "description": "Incorrect parameters for GoIO instruction",
+          "description": "Parámetros incorrectos para la instrucción GoIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36114,
       "level": 5,
       "en": {
-          "description": "No input parameters for MoveIO instruction",
+          "description": "No hay parámetros de entrada para la instrucción MoveIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36115,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for MoveIO instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción MoveIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36116,
       "level": 5,
       "en": {
-          "description": "Incorrect parameters for MoveIO instruction",
+          "description": "Parámetros incorrectos para la instrucción MoveIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36117,
       "level": 5,
       "en": {
-          "description": "No input parameters for MoveJIO instruction",
+          "description": "No hay parámetros de entrada para la instrucción MoveJIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36118,
       "level": 5,
       "en": {
-          "description": "Incorrect motion point for MoveJIO instruction",
+          "description": "Punto de movimiento incorrecto para la instrucción MoveJIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
   },
   {
       "id": 36119,
       "level": 5,
       "en": {
-          "description": "No input parameters for MoveJIO instruction",
+          "description": "No hay parámetros de entrada para la instrucción MoveJIO.",
           "cause": "",
-          "solution": "Enter the correct parameters"
+          "solution": "Ingrese los parámetros correctos"
         }
       }
 ]
