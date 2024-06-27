@@ -436,9 +436,6 @@ class RobotUI(object):
             print("robot_mode:", a["robot_mode"][0])
             print("test_value:", hex((a['test_value'][0])))
             if hex((a['test_value'][0])) == '0x123456789abcdef':
-                # print('tool_vector_actual',
-                #       np.around(a['tool_vector_actual'], decimals=4))
-                # print('q_actual', np.around(a['q_actual'], decimals=4))
 
                 # Refresh Properties
                 self.label_feed_speed["text"] = a["speed_scaling"][0]
