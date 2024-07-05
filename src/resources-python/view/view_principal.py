@@ -15,8 +15,8 @@ from tkinter import ttk, messagebox
 from tkinter.scrolledtext import ScrolledText
 from Api.dobot_api import *
 import json
-from files.alarm_controller import alarm_controller_list
-from files.alarm_servo import alarm_servo_list
+from Alarm.alarm_controller import *
+from Alarm.alarm_servo import *
 
 LABEL_JOINT = [["J1-", "J2-", "J3-", "J4-"],
                ["J1:", "J2:", "J3:", "J4:"],
@@ -48,8 +48,6 @@ class RobotUI(object):
         self.root.title("MG400/M1Pro Python demo")
         # fixed window size
         self.root.geometry("900x850")
-        # set window icon
-        # self.root.iconbitmap("images/robot.ico")
 
         # global state dict
         self.global_state = {}
@@ -103,7 +101,7 @@ class RobotUI(object):
 
         # Enable/Disable(habilitar y desabilitar)
         self.button_enable = self.set_button(master=self.frame_dashboard,
-                                             text="Encender", rely=0.1, x=10, command=self.enable)
+                                             text="enable", rely=0.1, x=10, command=self.enable)
         self.button_enable["width"] = 7
         self.global_state["enable"] = False
 
@@ -248,8 +246,6 @@ class RobotUI(object):
         return alarm_dict
 
     def read_file(self, path):
-        # 读json文件耗时大，选择维护两个变量alarm_controller_list alarm_servo_list
-        # self.read_file("files/alarm_controller.json")
         with open(path, "r", encoding="utf8") as fp:
             json_data = json.load(fp)
         return json_data
@@ -387,36 +383,23 @@ class RobotUI(object):
 
     def set_feed(self, text_list, x1, x2, x3, x4):
         self.set_button_bind(
-            self.frame_feed, text_list[0][0], rely=0.2, x=x1, command=lambda: self.move_jog(text_list[0][0]))
+        self.frame_feed, text_list[0][0], rely=0.2, x=x1, command=lambda: self.move_jog(text_list[0][0]))
         self.set_button_bind(
-            self.frame_feed, text_list[0][1], rely=0.3, x=x1, command=lambda: self.move_jog(text_list[0][1]))
+        self.frame_feed, text_list[0][1], rely=0.3, x=x1, command=lambda: self.move_jog(text_list[0][1]))
         self.set_button_bind(
-            self.frame_feed, text_list[0][2], rely=0.4, x=x1, command=lambda: self.move_jog(text_list[0][2]))
+        self.frame_feed, text_list[0][2], rely=0.4, x=x1, command=lambda: self.move_jog(text_list[0][2]))
         self.set_button_bind(
-            self.frame_feed, text_list[0][3], rely=0.5, x=x1, command=lambda: self.move_jog(text_list[0][3]))
-
-        self.set_label(self.frame_feed, text_list[1][0], rely=0.21, x=x2)
-        self.set_label(self.frame_feed, text_list[1][1], rely=0.31, x=x2)
-        self.set_label(self.frame_feed, text_list[1][2], rely=0.41, x=x2)
-        self.set_label(self.frame_feed, text_list[1][3], rely=0.51, x=x2)
-
-        self.label_feed_dict[text_list[1][0]] = self.set_label(
-            self.frame_feed, " ", rely=0.21, x=x3)
-        self.label_feed_dict[text_list[1][1]] = self.set_label(
-            self.frame_feed, " ", rely=0.31, x=x3)
-        self.label_feed_dict[text_list[1][2]] = self.set_label(
-            self.frame_feed, " ", rely=0.41, x=x3)
-        self.label_feed_dict[text_list[1][3]] = self.set_label(
-            self.frame_feed, " ", rely=0.51, x=x3)
+        self.frame_feed, text_list[0][3], rely=0.5, x=x1, command=lambda: self.move_jog(text_list[0][3]))
 
         self.set_button_bind(
-            self.frame_feed, text_list[2][0], rely=0.2, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.frame_feed, text_list[2][0], rely=0.2, x=x4, command=lambda: self.move_jog(text_list[2][0]))
         self.set_button_bind(
-            self.frame_feed, text_list[2][1], rely=0.3, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.frame_feed, text_list[2][1], rely=0.3, x=x4, command=lambda: self.move_jog(text_list[2][0]))
         self.set_button_bind(
-            self.frame_feed, text_list[2][2], rely=0.4, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.frame_feed, text_list[2][2], rely=0.4, x=x4, command=lambda: self.move_jog(text_list[2][0]))
         self.set_button_bind(
-            self.frame_feed, text_list[2][3], rely=0.5, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+        self.frame_feed, text_list[2][3], rely=0.5, x=x4, command=lambda: self.move_jog(text_list[2][0]))
+
 
     def feed_back(self):
         hasRead = 0
