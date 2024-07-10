@@ -1,4 +1,5 @@
 import os,sys
+from tkinter.scrolledtext import ScrolledText
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(script_dir)
@@ -64,49 +65,49 @@ class App(customtkinter.CTk):
         self.sidebar_frame.grid(row=0, column=0, rowspan=1, sticky="nsew")
         self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="TCP/IP Connect",
                                                  font=customtkinter.CTkFont(family="Roboto", size=20))
-        self.logo_label.place(relx=0.1, rely=0.05)
+        self.logo_label.place(relx=0.1, rely=0.01)
 
         #Entry Ip Port
         self.label_ip = customtkinter.CTkLabel(self.sidebar_frame, text="Dirección IP: ", anchor="w",
                                                font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.label_ip.place(relx=0.1, rely=0.15)
+        self.label_ip.place(relx=0.1, rely=0.05)
         self.ip_port = customtkinter.StringVar(self.sidebar_frame, value="192.168.1.6")
         self.entry_ip = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text="192.168.1.6",
                                                textvariable=self.ip_port, justify="center")
-        self.entry_ip.place(relx=0.5, rely=0.15)
+        self.entry_ip.place(relx=0.5, rely=0.05)
 
         # Entry Dashboard Port
         self.label_dash = customtkinter.CTkLabel(self.sidebar_frame, text="Dashboard Port:", anchor="w",
                                                  font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.label_dash.place(relx=0.1, rely=0.20)
+        self.label_dash.place(relx=0.1, rely=0.10)
         self.dash_port = customtkinter.StringVar(self.sidebar_frame, value="29999")
         self.entry_dash = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text="29999",
                                                  textvariable=self.dash_port, justify="center")
-        self.entry_dash.place(relx=0.5, rely=0.20)
+        self.entry_dash.place(relx=0.5, rely=0.10)
 
         #Entry FeedBack Port
         self.label_feed = customtkinter.CTkLabel(self.sidebar_frame, text="Feedback Port: ", anchor="w",
                                                  font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.label_feed.place(relx=0.1, rely=0.25)
+        self.label_feed.place(relx=0.1, rely=0.15)
         self.feed_port = customtkinter.StringVar(self.sidebar_frame, value="30004")
         self.entry_feed = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text="30004",
                                                  textvariable=self.feed_port, justify="center")
-        self.entry_feed.place(relx=0.5, rely=0.25)
+        self.entry_feed.place(relx=0.5, rely=0.15)
 
         # Entry Move Port
         self.label_move = customtkinter.CTkLabel(self.sidebar_frame, text="Move Port:", anchor="w",
                                                  font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.label_move.place(relx=0.1, rely=0.3)
+        self.label_move.place(relx=0.1, rely=0.20)
         self.move_port = customtkinter.StringVar(self.sidebar_frame, value="30003")
         self.entry_move = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text="30004",
                                                  textvariable=self.move_port, justify="center")
-        self.entry_move.place(relx=0.5, rely=0.3)
+        self.entry_move.place(relx=0.5, rely=0.20)
 
         #Robot Connect
         self.button_connect = customtkinter.CTkButton(self.sidebar_frame, text="Connect", width=200,
                                                       command=self.connect_port,
                                                       font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.button_connect.place(relx=0.23, rely=0.38)
+        self.button_connect.place(relx=0.23, rely=0.25)
         self.global_state["connect"] = False
 
         # Funciones de Dashboard
@@ -119,42 +120,57 @@ class App(customtkinter.CTk):
                                                      fg_color="#867976",
                                                      command=self.enable, state="disabled",
                                                      font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.button_enable.place(relx=0.1, rely=0.43)
+        self.button_enable.place(relx=0.1, rely=0.30)
         self.global_state["enable"] = False
 
          # Digital Outputs
         self.label_digitial = customtkinter.CTkLabel(self.sidebar_frame, text="Digital Outputs:", anchor="w", 
                                                      font=customtkinter.CTkFont(family="Roboto", size=12))
-        self.label_digitial.place(relx=0.1, rely=0.55)
+        self.label_digitial.place(relx=0.1, rely=0.37)
         
         i_value = customtkinter.IntVar(self.sidebar_frame, value=1)
         self.entry_index = customtkinter.CTkEntry(self.sidebar_frame, width=30, textvariable=i_value, placeholder_text="1")
-        self.entry_index.place(relx=0.35, rely=0.55)
+        self.entry_index.place(relx=0.35, rely=0.37)
 
         self.label_status = customtkinter.CTkLabel(self.sidebar_frame, text="Status:", anchor="w", font=customtkinter.CTkFont(family="Roboto", size=12))
-        self.label_status.place(relx=0.45, rely=0.55)
+        self.label_status.place(relx=0.45, rely=0.37)
 
         self.combo_status = customtkinter.CTkComboBox(
         self.sidebar_frame, width=55, values=["On", "Off"])
         self.combo_status.set("On")
-        self.combo_status.place(relx=0.58, rely=0.55)
+        self.combo_status.place(relx=0.58, rely=0.37)
 
         self.confirm_button = customtkinter.CTkButton(self.sidebar_frame, text="Confirm", command=self.confirm_do, width=70)
-        self.confirm_button.place(relx=0.75, rely=0.55)
+        self.confirm_button.place(relx=0.75, rely=0.37)
 
         # Entry Speed Ratio
         self.label_speed = customtkinter.CTkLabel(self.sidebar_frame, text="Speed Ratio:")
-        self.label_speed.place(relx=0.1, rely=0.6)
+        self.label_speed.place(relx=0.1, rely=0.42)
         self.s_value = customtkinter.StringVar(self.dash_frame, value="25")
         self.entry_speed = customtkinter.CTkEntry(self.sidebar_frame, width=40, textvariable=self.s_value,
                                                   justify="center")
-        self.entry_speed.place(relx=0.4, rely=0.6)
+        self.entry_speed.place(relx=0.4, rely=0.42)
         self.label_cent = customtkinter.CTkLabel(self.sidebar_frame, text="%")
-        self.label_cent.place(relx=0.55, rely=0.6)
+        self.label_cent.place(relx=0.55, rely=0.42)
         self.set_button = customtkinter.CTkButton(self.sidebar_frame, text="Confirm", command=self.confirm_speed,
                                                   width=70)
-        self.set_button.place(relx=0.70, rely=0.6)
+        self.set_button.place(relx=0.70, rely=0.42)
+        
+        # Error Info
+        self.frame_err = customtkinter.CTkFrame(self.sidebar_frame, width=280, height=200, corner_radius=10)
+        self.frame_err.place(relx=0.1, rely=0.5, anchor='nw')
+        self.frame_err.grid_propagate(False)
 
+        self.label_err = customtkinter.CTkLabel(self.frame_err, text="Informacion de errores", anchor="w",
+                                                font=customtkinter.CTkFont(family="Roboto", size=12))
+        self.label_err.pack(side="top", fill="x")
+
+        self.text_err = ScrolledText(self.frame_err, width=38, height=10, relief="flat")
+        self.text_err.pack(side="top", fill="both", expand=True)
+
+        self.clear_button = customtkinter.CTkButton(self.frame_err, text="Clear", command=self.clear_errors, width=70)
+        self.clear_button.pack(side="bottom", anchor="se", pady=5, padx=5) 
+        
         # # Logo
         image_tk = customtkinter.CTkImage(Image.open("src/resources-python/Images/LOGO-1.png"), size=(250, 100))
         my_label = customtkinter.CTkLabel(self.sidebar_frame, text="", image=image_tk)
@@ -547,6 +563,8 @@ class App(customtkinter.CTk):
 
         return button
 
+    def clear_errors(self):
+        self.text_err.delete('1.0', 'end')    
         
     def move_jog(self, text):
         if self.global_state["connect"]:
