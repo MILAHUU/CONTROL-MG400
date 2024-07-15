@@ -168,7 +168,7 @@ class App(customtkinter.CTk):
         self.text_err = ScrolledText(self.frame_err, width=38, height=10, relief="flat")
         self.text_err.pack(side="top", fill="both", expand=True)
 
-        self.clear_button = customtkinter.CTkButton(self.frame_err, text="Clear", command=self.clear_errors, width=70)
+        self.clear_button = customtkinter.CTkButton(self.frame_err, text="Clear", command=self.clear_error_info, width=70)
         self.clear_button.pack(side="bottom", anchor="se", pady=5, padx=5) 
         
         # # Logo
@@ -562,8 +562,34 @@ class App(customtkinter.CTk):
             self.button_list.append(button)
 
         return button
+    
+    def display_error_info(self):
+        error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
 
-    def clear_errors(self):
+        error_list = json.loads(error_list)
+        print("error_list:", error_list)
+        if error_list[0]:
+            for i in error_list[0]:
+                self.form_error(i, self.alarm_controller_dict,
+                                "Controller Error")
+
+        for m in range(1, len(error_list)):
+            if error_list[m]:
+                for n in range(len(error_list[m])):
+                    self.form_error(n, self.alarm_servo_dict, "Servo Error")
+    
+    def form_error(self, index, alarm_dict: dict, type_text):
+        if index in alarm_dict.keys():
+            date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
+            error_info = f"Time Stamp:{date}\n"
+            error_info = error_info + f"ID:{index}\n"
+            error_info = error_info + \
+                f"Type:{type_text}\nLevel:{alarm_dict[index]['level']}\n" + \
+                f"Solution:{alarm_dict[index]['en']['solution']}\n"
+
+            self.text_err.insert(END, error_info)
+
+    def clear_error_info(self):
         self.text_err.delete('1.0', 'end')    
         
     def move_jog(self, text):
