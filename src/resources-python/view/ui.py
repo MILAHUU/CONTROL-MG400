@@ -88,26 +88,26 @@ class App(customtkinter.CTk):
         #Entry FeedBack Port
         self.label_feed = customtkinter.CTkLabel(self.sidebar_frame, text="Feedback Port: ", anchor="w",
                                                  font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.label_feed.place(relx=0.1, rely=0.20)
+        self.label_feed.place(relx=0.1, rely=0.15)
         self.feed_port = customtkinter.StringVar(self.sidebar_frame, value="30004")
         self.entry_feed = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text="30004",
                                                  textvariable=self.feed_port, justify="center")
-        self.entry_feed.place(relx=0.5, rely=0.20)
+        self.entry_feed.place(relx=0.5, rely=0.15)
 
         # Entry Move Port
         self.label_move = customtkinter.CTkLabel(self.sidebar_frame, text="Move Port:", anchor="w",
                                                  font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.label_move.place(relx=0.1, rely=0.25)
+        self.label_move.place(relx=0.1, rely=0.20)
         self.move_port = customtkinter.StringVar(self.sidebar_frame, value="30003")
         self.entry_move = customtkinter.CTkEntry(self.sidebar_frame, placeholder_text="30004",
                                                  textvariable=self.move_port, justify="center")
-        self.entry_move.place(relx=0.5, rely=0.25)
+        self.entry_move.place(relx=0.5, rely=0.20)
 
         #Robot Connect
         self.button_connect = customtkinter.CTkButton(self.sidebar_frame, text="Connect", width=200,
                                                       command=self.connect_port,
                                                       font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.button_connect.place(relx=0.23, rely=0.30)
+        self.button_connect.place(relx=0.23, rely=0.25)
         self.global_state["connect"] = False
 
         # Funciones de Dashboard
@@ -120,41 +120,41 @@ class App(customtkinter.CTk):
                                                      fg_color="#867976",
                                                      command=self.enable, state="disabled",
                                                      font=customtkinter.CTkFont(family="Roboto", size=16))
-        self.button_enable.place(relx=0.1, rely=0.35)
+        self.button_enable.place(relx=0.1, rely=0.30)
         self.global_state["enable"] = False
 
          # Digital Outputs
         self.label_digitial = customtkinter.CTkLabel(self.sidebar_frame, text="Digital Outputs:", anchor="w", 
                                                      font=customtkinter.CTkFont(family="Roboto", size=12))
-        self.label_digitial.place(relx=0.1, rely=0.40)
+        self.label_digitial.place(relx=0.1, rely=0.37)
         
         i_value = customtkinter.IntVar(self.sidebar_frame, value=1)
         self.entry_index = customtkinter.CTkEntry(self.sidebar_frame, width=30, textvariable=i_value, placeholder_text="1")
-        self.entry_index.place(relx=0.35, rely=0.40)
+        self.entry_index.place(relx=0.35, rely=0.37)
 
         self.label_status = customtkinter.CTkLabel(self.sidebar_frame, text="Status:", anchor="w", font=customtkinter.CTkFont(family="Roboto", size=12))
-        self.label_status.place(relx=0.45, rely=0.40)
+        self.label_status.place(relx=0.45, rely=0.37)
 
         self.combo_status = customtkinter.CTkComboBox(
         self.sidebar_frame, width=55, values=["On", "Off"])
         self.combo_status.set("On")
-        self.combo_status.place(relx=0.58, rely=0.40)
+        self.combo_status.place(relx=0.58, rely=0.37)
 
         self.confirm_button = customtkinter.CTkButton(self.sidebar_frame, text="Confirm", command=self.confirm_do, width=70)
-        self.confirm_button.place(relx=0.75, rely=0.40)
+        self.confirm_button.place(relx=0.75, rely=0.37)
 
         # Entry Speed Ratio
         self.label_speed = customtkinter.CTkLabel(self.sidebar_frame, text="Speed Ratio:")
-        self.label_speed.place(relx=0.1, rely=0.45)
+        self.label_speed.place(relx=0.1, rely=0.42)
         self.s_value = customtkinter.StringVar(self.dash_frame, value="25")
         self.entry_speed = customtkinter.CTkEntry(self.sidebar_frame, width=40, textvariable=self.s_value,
                                                   justify="center")
-        self.entry_speed.place(relx=0.4, rely=0.45)
+        self.entry_speed.place(relx=0.4, rely=0.42)
         self.label_cent = customtkinter.CTkLabel(self.sidebar_frame, text="%")
-        self.label_cent.place(relx=0.55, rely=0.45)
+        self.label_cent.place(relx=0.55, rely=0.42)
         self.set_button = customtkinter.CTkButton(self.sidebar_frame, text="Confirm", command=self.confirm_speed,
                                                   width=70)
-        self.set_button.place(relx=0.70, rely=0.45)
+        self.set_button.place(relx=0.70, rely=0.42)
         
         # Error Info
         self.frame_err = customtkinter.CTkFrame(self.sidebar_frame, width=280, height=200, corner_radius=10)
@@ -168,7 +168,7 @@ class App(customtkinter.CTk):
         self.text_err = ScrolledText(self.frame_err, width=38, height=10, relief="flat")
         self.text_err.pack(side="top", fill="both", expand=True)
 
-        self.clear_button = customtkinter.CTkButton(self.frame_err, text="Clear", command=self.clear_errors, width=70)
+        self.clear_button = customtkinter.CTkButton(self.frame_err, text="Clear", command=self.clear_error_info, width=70)
         self.clear_button.pack(side="bottom", anchor="se", pady=5, padx=5) 
         
         # # Logo
@@ -562,8 +562,34 @@ class App(customtkinter.CTk):
             self.button_list.append(button)
 
         return button
+    
+    def display_error_info(self):
+        error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
 
-    def clear_errors(self):
+        error_list = json.loads(error_list)
+        print("error_list:", error_list)
+        if error_list[0]:
+            for i in error_list[0]:
+                self.form_error(i, self.alarm_controller_dict,
+                                "Controller Error")
+
+        for m in range(1, len(error_list)):
+            if error_list[m]:
+                for n in range(len(error_list[m])):
+                    self.form_error(n, self.alarm_servo_dict, "Servo Error")
+    
+    def form_error(self, index, alarm_dict: dict, type_text):
+        if index in alarm_dict.keys():
+            date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
+            error_info = f"Time Stamp:{date}\n"
+            error_info = error_info + f"ID:{index}\n"
+            error_info = error_info + \
+                f"Type:{type_text}\nLevel:{alarm_dict[index]['level']}\n" + \
+                f"Solution:{alarm_dict[index]['en']['solution']}\n"
+
+            self.text_err.insert(END, error_info)
+
+    def clear_error_info(self):
         self.text_err.delete('1.0', 'end')    
         
     def move_jog(self, text):
