@@ -564,30 +564,39 @@ class App(customtkinter.CTk):
         return button
     
     def display_error_info(self):
-        error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
-
-        error_list = json.loads(error_list)
-        print("error_list:", error_list)
+        error_id = self.client_dash.GetErrorID()
+        print("Error ID from client_dash:", error_id)
+        try:
+            error_list = error_id.split("{")[1].split("}")[0]
+            error_list = json.loads(error_list)
+        except (IndexError, json.JSONDecodeError) as e:
+            print(f"Error parsing error_id: {e}")
+            return
+        
+        print("Parsed error_list:", error_list)
         if error_list[0]:
             for i in error_list[0]:
-                self.form_error(i, self.alarm_controller_dict,
-                                "Controller Error")
-
+                self.form_error(i, self.alarm_controller_dict, "Controller Error")
+        
         for m in range(1, len(error_list)):
             if error_list[m]:
                 for n in range(len(error_list[m])):
                     self.form_error(n, self.alarm_servo_dict, "Servo Error")
     
     def form_error(self, index, alarm_dict: dict, type_text):
-        if index in alarm_dict.keys():
-            date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
-            error_info = f"Time Stamp:{date}\n"
-            error_info = error_info + f"ID:{index}\n"
-            error_info = error_info + \
-                f"Type:{type_text}\nLevel:{alarm_dict[index]['level']}\n" + \
-                f"Solution:{alarm_dict[index]['en']['solution']}\n"
+        try:
+            if index in alarm_dict.keys():
+                date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
+                error_info = f"Time Stamp:{date}\nID:{index}\nType:{type_text}\n" \
+                            f"Level:{alarm_dict[index]['level']}\n" \
+                            f"Solution:{alarm_dict[index]['en']['solution']}\n"
 
-            self.text_err.insert(END, error_info)
+                print("Error info to be inserted:", error_info)
+                self.text_err.insert(END, error_info)
+            else:
+                print(f"Index {index} not found in alarm_dict")
+        except Exception as e:
+            print(f"Exception in form_error: {e}")
 
     def clear_error_info(self):
         self.text_err.delete('1.0', 'end')    
@@ -674,6 +683,8 @@ class App(customtkinter.CTk):
             feedInfo = np.frombuffer(data, dtype=MyType)
             if hex((feedInfo['test_value'][0])) == '0x123456789abcdef':
                 globalLockValue.acquire()
+                # manejar la informacion de errores aquí
+                self.display_error_info()
                 # Actualizar propiedades
                 current_actual = feedInfo["tool_vector_actual"][0]
                 feed_joint = feedInfo['q_actual'][0]
