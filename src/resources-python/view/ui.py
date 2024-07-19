@@ -159,13 +159,13 @@ class App(customtkinter.CTk):
         # Error Info
         self.frame_err = customtkinter.CTkFrame(self.sidebar_frame, width=280, height=200, corner_radius=10)
         self.frame_err.place(relx=0.1, rely=0.5, anchor='nw')
-        self.frame_err.grid_propagate(False)
+        # self.frame_err.grid_propagate(False)
 
-        self.label_err = customtkinter.CTkLabel(self.frame_err, text="Informacion de errores", anchor="w",
+        self.label_err = customtkinter.CTkLabel(self.frame_err, text="Informacion de errores", anchor="w", 
                                                 font=customtkinter.CTkFont(family="Roboto", size=12))
         self.label_err.pack(side="top", fill="x")
 
-        self.text_err = ScrolledText(self.frame_err, width=38, height=10, relief="flat")
+        self.text_err = ScrolledText(self.frame_err, width=33, height=10, relief="flat")
         self.text_err.pack(side="top", fill="both", expand=True)
 
         self.clear_button = customtkinter.CTkButton(self.frame_err, text="Clear", command=self.clear_error_info, width=70)
@@ -174,7 +174,7 @@ class App(customtkinter.CTk):
         # # Logo
         image_tk = customtkinter.CTkImage(Image.open("src/resources-python/Images/LOGO-1.png"), size=(250, 100))
         my_label = customtkinter.CTkLabel(self.sidebar_frame, text="", image=image_tk)
-        my_label.place(relx=0.5, rely=0.83, anchor='center')
+        my_label.place(relx=0.5, rely=0.90, anchor='center')
 
         # create tabview
         self.frame_lateral = customtkinter.CTkFrame(self, corner_radius=1)
@@ -275,7 +275,7 @@ class App(customtkinter.CTk):
         self.button_enviar_inversa.grid(row=5, column=0, columnspan=5, padx=(10, 10), pady=(10, 10))
 
         # Feedback
-        self.sidebar_frame = customtkinter.CTkFrame(self.frame_lateral)
+        self.sidebar_frame = customtkinter.CTkFrame(self.frame_lateral, width=200, height=100)
         self.sidebar_frame.grid(row=1, column=0, padx=(10, 10), pady=(20, 15), sticky="nsew")
 
         label_feedback = customtkinter.CTkLabel(self.sidebar_frame, text="Feedback: ")
@@ -372,7 +372,8 @@ class App(customtkinter.CTk):
 
         # Botones
         self.button_clean = customtkinter.CTkButton(self.container_botones, text="Reiniciar Robot",
-                                                    command=self.reset_clear_robot, width=150, height=45)
+                                                    command=self.reset_clear_robot, width=110, height=45,
+                                                    fg_color="#00FF00")
         self.button_clean.pack(side="left", padx=(10, 5), pady=(20, 15))
 
         self.button_home_robot = customtkinter.CTkButton(self.container_botones, text="Llevar Articulaciones a Home",
@@ -381,7 +382,8 @@ class App(customtkinter.CTk):
         self.button_home_robot.pack(side="left", padx=(5, 5), pady=(20, 15))
 
         self.button_clean_error = customtkinter.CTkButton(self.container_botones, text="Limpiar errores",
-                                                          command=self.clear_error, width=150, height=45)
+                                                          command=self.clear_error, width=110, height=45,
+                                                          fg_color="#FF0000")
         self.button_clean_error.pack(side="left", padx=(5, 10), pady=(20, 15))
 
         # Footer
@@ -826,6 +828,6 @@ class App(customtkinter.CTk):
         self.client_move.JointMovJ(0, 0, 0, 0)
 
 
-if __name__ == "__main__":
-    app = App()
-    app.mainloop()
+# if __name__ == "__main__":
+#     app = App()
+#     app.mainloop()
