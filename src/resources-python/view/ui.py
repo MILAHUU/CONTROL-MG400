@@ -49,6 +49,8 @@ class App(customtkinter.CTk):
         self.client_move = None
         self.global_state = {}
         self.button_list = []
+        self.show_errors = set()
+        self.text_err = None
         
         self.alarm_controller_dict = self.convert_dict(alarm_controller_list)
         self.alarm_servo_dict = self.convert_dict(alarm_servo_list)
@@ -680,12 +682,16 @@ class App(customtkinter.CTk):
         error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
         error_list = json.loads(error_list)
         print("error_list:", error_list)
+        #Limpiar la vista de errores
+        self.clear_error_info()
+        
         if error_list[0]:
             for i in error_list[0]:
                 if i not in self.show_errors:
                     self.show_errors.add(i)
                     self.form_error(i, self.alarm_controller_dict,
                                     "Controller Error")
+                    break
 
         for m in range(1, len(error_list)):
             if error_list[m]:
@@ -693,6 +699,7 @@ class App(customtkinter.CTk):
                     if n not in self.show_errors:
                         self.show_errors.add(n)
                         self.form_error(n, self.alarm_servo_dict, "Servo Error")
+                        break
     
     def form_error(self, index, alarm_dict: dict, type_text):
         if index in alarm_dict.keys():
