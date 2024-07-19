@@ -16,6 +16,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from threading import Thread
 from Models.cinematica_inversa import *
 from Models.cinematica_directa import *
+import json
+from Alarm.alarm_controller import *
+from Alarm.alarm_servo import *
 import math
 
 
@@ -46,6 +49,9 @@ class App(customtkinter.CTk):
         self.client_move = None
         self.global_state = {}
         self.button_list = []
+        
+        self.alarm_controller_dict = self.convert_dict(alarm_controller_list)
+        self.alarm_servo_dict = self.convert_dict(alarm_servo_list)
 
         #setup_window
         self.title('Dobot MG400 - UAO -')
@@ -363,7 +369,7 @@ class App(customtkinter.CTk):
 
         #  Crear un widget CTkLabel con el texto formateado
         self.mensaje_advertencia = customtkinter.CTkLabel(self.container_advertencia, text=texto_advertencia,
-                                                          justify="left", wraplength=450)
+                                                          font=("Helvetica", 14), justify="left", wraplength=450)
         self.mensaje_advertencia.pack(expand=True, padx=(30, 10), pady=(10, 10), fill='both', anchor='center')
 
         # Contenedor para los botones
@@ -554,6 +560,17 @@ class App(customtkinter.CTk):
 
         
         # Funciones
+    def convert_dict(self, alarm_list):
+        alarm_dict = {}
+        for i in alarm_list:
+            alarm_dict[i["id"]] = i
+        return alarm_dict
+    
+    def read_file(self, path):
+        with open(path, "r", encoding="utf8") as fp:
+            json_data = json.load(fp)
+        return json_data
+    
     def set_button_bind(self, button, text, rely, x, **kwargs):
         button.bind("<ButtonPress-1>", lambda event: self.move_jog(text=text))
         button.bind("<ButtonRelease-1>", self.move_stop)
@@ -564,44 +581,6 @@ class App(customtkinter.CTk):
             self.button_list.append(button)
 
         return button
-    
-    def display_error_info(self):
-        error_id = self.client_dash.GetErrorID()
-        print("Error ID from client_dash:", error_id)
-        try:
-            error_list = error_id.split("{")[1].split("}")[0]
-            error_list = json.loads(error_list)
-        except (IndexError, json.JSONDecodeError) as e:
-            print(f"Error parsing error_id: {e}")
-            return
-        
-        print("Parsed error_list:", error_list)
-        if error_list[0]:
-            for i in error_list[0]:
-                self.form_error(i, self.alarm_controller_dict, "Controller Error")
-        
-        for m in range(1, len(error_list)):
-            if error_list[m]:
-                for n in range(len(error_list[m])):
-                    self.form_error(n, self.alarm_servo_dict, "Servo Error")
-    
-    def form_error(self, index, alarm_dict: dict, type_text):
-        try:
-            if index in alarm_dict.keys():
-                date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
-                error_info = f"Time Stamp:{date}\nID:{index}\nType:{type_text}\n" \
-                            f"Level:{alarm_dict[index]['level']}\n" \
-                            f"Solution:{alarm_dict[index]['en']['solution']}\n"
-
-                print("Error info to be inserted:", error_info)
-                self.text_err.insert(END, error_info)
-            else:
-                print(f"Index {index} not found in alarm_dict")
-        except Exception as e:
-            print(f"Exception in form_error: {e}")
-
-    def clear_error_info(self):
-        self.text_err.delete('1.0', 'end')    
         
     def move_jog(self, text):
         if self.global_state["connect"]:
@@ -685,15 +664,50 @@ class App(customtkinter.CTk):
             feedInfo = np.frombuffer(data, dtype=MyType)
             if hex((feedInfo['test_value'][0])) == '0x123456789abcdef':
                 globalLockValue.acquire()
-                # manejar la informacion de errores aquí
-                self.display_error_info()
                 # Actualizar propiedades
                 current_actual = feedInfo["tool_vector_actual"][0]
                 feed_joint = feedInfo['q_actual'][0]
                 globalLockValue.release()
                 # Refrescar feedback
                 self.set_feed_joint()
+                
+                #verificar alarmas
+                if feedInfo["robot_mode"][0] == 9:
+                    self.display_error_info()
             time.sleep(0.005)
+            
+    def display_error_info(self):
+        error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
+        error_list = json.loads(error_list)
+        print("error_list:", error_list)
+        if error_list[0]:
+            for i in error_list[0]:
+                if i not in self.show_errors:
+                    self.show_errors.add(i)
+                    self.form_error(i, self.alarm_controller_dict,
+                                    "Controller Error")
+
+        for m in range(1, len(error_list)):
+            if error_list[m]:
+                for n in range(len(error_list[m])):
+                    if n not in self.show_errors:
+                        self.show_errors.add(n)
+                        self.form_error(n, self.alarm_servo_dict, "Servo Error")
+    
+    def form_error(self, index, alarm_dict: dict, type_text):
+        if index in alarm_dict.keys():
+            date = datetime.datetime.now().strftime("%Y.%m.%d:%H:%M:%S ")
+            error_info = f"Time Stamp:{date}\n"
+            error_info = error_info + f"ID:{index}\n"
+            error_info = error_info + \
+                f"Type:{type_text}\nLevel:{alarm_dict[index]['level']}\n" + \
+                f"Solution:{alarm_dict[index]['en']['solution']}\n"
+
+            self.text_err.insert(END, error_info)
+
+    def clear_error_info(self):
+        self.text_err.delete('1.0', 'end')
+        self.show_errors.clear() # Limpia el registro de errores mostrados
 
     def enable(self):
         if self.global_state["enable"]:
