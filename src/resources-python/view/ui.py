@@ -51,6 +51,7 @@ class App(customtkinter.CTk):
         self.button_list = []
         self.show_errors = set()
         self.text_err = None
+        self.last_error_reported = None
         
         self.alarm_controller_dict = self.convert_dict(alarm_controller_list)
         self.alarm_servo_dict = self.convert_dict(alarm_servo_list)
@@ -679,7 +680,6 @@ class App(customtkinter.CTk):
     def display_error_info(self):
         error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
         error_list = json.loads(error_list)
-        print("error_list:", error_list)
         #Limpiar la vista de errores
         self.clear_error_info()
         
@@ -687,7 +687,9 @@ class App(customtkinter.CTk):
             for i in error_list[0]:
                 if i not in self.show_errors:
                     self.show_errors.add(i)
-                    self.form_error(i, self.alarm_controller_dict,
+                    if self.last_error_reported != i:
+                        print(f"controller Error: {i}")
+                        self.form_error(i, self.alarm_controller_dict,
                                     "Controller Error")
                     break
 
@@ -696,7 +698,10 @@ class App(customtkinter.CTk):
                 for n in range(len(error_list[m])):
                     if n not in self.show_errors:
                         self.show_errors.add(n)
-                        self.form_error(n, self.alarm_servo_dict, "Servo Error")
+                        if self.last_error_reported != n: 
+                            print(f"Servo Error: {n}")
+                            self.form_error(n, self.alarm_servo_dict, "Servo Error")
+                            self.last_error_reported = n
                         break
     
     def form_error(self, index, alarm_dict: dict, type_text):
