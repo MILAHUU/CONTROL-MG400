@@ -52,6 +52,7 @@ class App(customtkinter.CTk):
         self.show_errors = set()
         self.text_err = None
         self.last_error_reported = None
+        self.collapse_detected = False
         
         self.alarm_controller_dict = self.convert_dict(alarm_controller_list)
         self.alarm_servo_dict = self.convert_dict(alarm_servo_list)
@@ -654,7 +655,7 @@ class App(customtkinter.CTk):
         global feed_joint
         hasRead: int = 0
         while True:
-            if not self.global_state["connect"]:
+            if not self.global_state["connect"] or self.collapse_detected:
                 break
             data = bytes()
             while hasRead < 1440:
@@ -677,11 +678,14 @@ class App(customtkinter.CTk):
                 #verificar alarmas
                 if feedInfo["robot_mode"][0] == 9:
                     self.display_error_info()
+                    self.collapse_detected = True #colapso detectad, parar el hilo
             time.sleep(0.005)
             
     def display_error_info(self):
         error_list = self.client_dash.GetErrorID().split("{")[1].split("}")[0]
         error_list = json.loads(error_list)
+        print("error_list: ", error_list)
+        
         #Limpiar la vista de errores
         self.clear_error_info()
         
@@ -689,10 +693,7 @@ class App(customtkinter.CTk):
             for i in error_list[0]:
                 if i not in self.show_errors:
                     self.show_errors.add(i)
-                    if self.last_error_reported != i:
-                        print(f"controller Error: {i}")
-                        self.form_error(i, self.alarm_controller_dict,
-                                    "Controller Error")
+                    self.form_error(i, self.alarm_controller_dict, "Controller Error")
                     break
 
         for m in range(1, len(error_list)):
@@ -700,10 +701,7 @@ class App(customtkinter.CTk):
                 for n in range(len(error_list[m])):
                     if n not in self.show_errors:
                         self.show_errors.add(n)
-                        if self.last_error_reported != n: 
-                            print(f"Servo Error: {n}")
-                            self.form_error(n, self.alarm_servo_dict, "Servo Error")
-                            self.last_error_reported = n
+                        self.form_error(n, self.alarm_servo_dict, "Servo Error")
                         break
     
     def form_error(self, index, alarm_dict: dict, type_text):
