@@ -1,5 +1,8 @@
 import os,sys
 from tkinter.scrolledtext import ScrolledText
+# Añade el directorio base del proyecto a `PYTHONPATH`
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+from src.db.conexion_bd import Database #Importa la funion de conexión
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(script_dir)
@@ -49,6 +52,10 @@ class App(customtkinter.CTk):
         self.client_move = None
         self.global_state = {}
         self.button_list = []
+        
+        # Conectar a la base de datos
+        self.conexion_bd = Database()
+        
         self.show_errors = set()
         self.text_err = None
         self.last_error_reported = None
@@ -562,6 +569,36 @@ class App(customtkinter.CTk):
 
         
         # Funciones
+    def update_feedback(self):
+        # Obtiene los valores de las entradas
+        j1 = float(self.cinematica_directa_joint1.get())
+        j2 = float(self.cinematica_directa_joint2.get())
+        j3 = float(self.cinematica_directa_joint3.get())
+        j4 = float(self.cinematica_directa_joint4.get())
+        
+        x = float(self.cinematica_inversa_x.get())
+        y = float(self.cinematica_inversa_y.get())
+        z = float(self.cinematica_inversa_z.get())
+        roll = float(self.cinematica_inversa_roll.get())
+
+        # Actualiza la interfaz de usuario
+        self.feed_x.configure(text=str(x))
+        self.feed_y.configure(text=str(y))
+        self.feed_z.configure(text=str(z))
+        self.feed_roll.configure(text=str(roll))
+        self.feed_j1.configure(text=str(j1))
+        self.feed_j2.configure(text=str(j2))
+        self.feed_j3.configure(text=str(j3))
+        self.feed_j4.configure(text=str(j4))
+
+        # Genera el timestamp actual
+        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+        # Inserta el movimiento en las tablas correspondientes de la base de datos
+        self.db.insert_inversa(x, y, z, roll, timestamp)
+        self.db.insert_directa(j1, j2, j3, j4, timestamp)
+        self.db.insert_personalizado(f"X: {x}, Y: {y}, Z: {z}, Roll: {roll}, J1: {j1}, J2: {j2}, J3: {j3}, J4: {j4}", timestamp)
+        
     def convert_dict(self, alarm_list):
         alarm_dict = {}
         for i in alarm_list:
