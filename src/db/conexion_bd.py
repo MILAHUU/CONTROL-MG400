@@ -16,7 +16,7 @@ class Database:
 
     def insert_directa(self, joint_1, joint_2, joint_3, joint_4, timestamp):
         try:
-            sql = "INSERT INTO directa (joint_1, joint_2, joint_3, joint_4, timestamp) VALUES (%s, %s, %s, %s, %s)"
+            sql = "INSERT INTO c_directa (joint_1, joint_2, joint_3, joint_4, timestamp) VALUES (%s, %s, %s, %s, %s)"
             values = (joint_1, joint_2, joint_3, joint_4, timestamp)
             self.cursor.execute(sql, values)
             self.connection.commit()
@@ -25,7 +25,7 @@ class Database:
 
     def insert_inversa(self, coord_x, coord_y, coord_z, roll, timestamp):
         try:
-            sql = "INSERT INTO inversa (coord_x, coord_y, coord_z, roll, timestamp) VALUES (%s, %s, %s, %s, %s)"
+            sql = "INSERT INTO c_inversa (coord_x, coord_y, coord_z, roll, timestamp) VALUES (%s, %s, %s, %s, %s)"
             values = (coord_x, coord_y, coord_z, roll, timestamp)
             self.cursor.execute(sql, values)
             self.connection.commit()

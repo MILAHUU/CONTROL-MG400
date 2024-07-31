@@ -571,36 +571,62 @@ class App(customtkinter.CTk):
 
         
         # Funciones
-    def update_feedback(self):
-        # Obtiene los valores de las entradas
+    def joint_movj(self):
+        # Obtener los valores de las entradas
         j1 = float(self.cinematica_directa_joint1.get())
         j2 = float(self.cinematica_directa_joint2.get())
         j3 = float(self.cinematica_directa_joint3.get())
         j4 = float(self.cinematica_directa_joint4.get())
+
+        # Ejecutar el movimiento del robot
+        self.client_move.JointMovJ(j1, j2, j3, j4)
+
+        # Obtener el timestamp actual
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Insertar los valores en la base de datos
+        self.conexion_bd.insert_directa(j1, j2, j3, j4, timestamp)
+        self.conexion_bd.insert_personalizado(f"J1: {j1}, J2: {j2}, J3: {j3}, J4: {j4}", timestamp)
+
+        # Actualizar el feedback
+        self.feed_j1.configure(text=f"{j1:.2f}")
+        self.feed_j2.configure(text=f"{j2:.2f}")
+        self.feed_j3.configure(text=f"{j3:.2f}")
+        self.feed_j4.configure(text=f"{j4:.2f}")
         
-        x = float(self.cinematica_inversa_x.get())
-        y = float(self.cinematica_inversa_y.get())
-        z = float(self.cinematica_inversa_z.get())
-        roll = float(self.cinematica_inversa_roll.get())
+    def join_movj_inversa(self):
+        # Obtener los valores de las entradas
+        valores_joint = list(range(4))
+        valores_joint[0] = float(self.cinematica_inversa_x.get())
+        valores_joint[1] = float(self.cinematica_inversa_y.get())
+        valores_joint[2] = float(self.cinematica_inversa_z.get())
+        valores_joint[3] = float(self.cinematica_inversa_roll.get())
 
-        # Actualiza la interfaz de usuario
-        self.feed_x.configure(text=str(x))
-        self.feed_y.configure(text=str(y))
-        self.feed_z.configure(text=str(z))
-        self.feed_roll.configure(text=str(roll))
-        self.feed_j1.configure(text=str(j1))
-        self.feed_j2.configure(text=str(j2))
-        self.feed_j3.configure(text=str(j3))
-        self.feed_j4.configure(text=str(j4))
+        radians_list_feed = [math.radians(deg) for deg in feed_joint]
 
-        # Genera el timestamp actual
-        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        q = calcular_cinematica_inversa(valores_joint, radians_list_feed[:4])
 
-        # Inserta el movimiento en las tablas correspondientes de la base de datos
-        self.db.insert_inversa(x, y, z, roll, timestamp)
-        self.db.insert_directa(j1, j2, j3, j4, timestamp)
-        self.db.insert_personalizado(f"X: {x}, Y: {y}, Z: {z}, Roll: {roll}, J1: {j1}, J2: {j2}, J3: {j3}, J4: {j4}", timestamp)
+        enviar_joint_q = [math.degrees(rad) for rad in q]
+
+        print(enviar_joint_q)
+        if self.global_state['connect']:
+            self.client_move.JointMovJ(float(enviar_joint_q[0]), float(enviar_joint_q[1]), float(enviar_joint_q[2]),
+                                    float(enviar_joint_q[3]))
+            self.client_move.Sync()
+
+        # Obtener el timestamp actual
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Insertar los valores en la base de datos
+        self.conexion_bd.insert_inversa(valores_joint[0], valores_joint[1], valores_joint[2], valores_joint[3], timestamp)
+        self.conexion_bd.insert_personalizado(f"X: {valores_joint[0]}, Y: {valores_joint[1]}, Z: {valores_joint[2]}, Roll: {valores_joint[3]}", timestamp)
         
+        # Actualizar el feedback
+        self.feed_x.configure(text=f"{valores_joint[0]:.2f}")
+        self.feed_y.configure(text=f"{valores_joint[1]:.2f}")
+        self.feed_z.configure(text=f"{valores_joint[2]:.2f}")
+        self.feed_roll.configure(text=f"{valores_joint[3]:.2f}")
+
     def convert_dict(self, alarm_list):
         alarm_dict = {}
         for i in alarm_list:
@@ -789,31 +815,6 @@ class App(customtkinter.CTk):
         self.feed_j3.configure(text=feed_joint[2])
         self.feed_j4.configure(text=feed_joint[3])
         #print(float(self.cinematica_directa_joint1.get()))
-
-    def joint_movj(self):
-        self.client_move.JointMovJ(float(self.cinematica_directa_joint1.get()),
-                                   float(self.cinematica_directa_joint2.get()),
-                                   float(self.cinematica_directa_joint3.get()),
-                                   float(self.cinematica_directa_joint4.get()))
-
-    def join_movj_inversa(self):
-        valores_joint = list(range(4))
-        valores_joint[0] = float(self.cinematica_inversa_x.get())
-        valores_joint[1] = float(self.cinematica_inversa_y.get())
-        valores_joint[2] = float(self.cinematica_inversa_z.get())
-        valores_joint[3] = float(self.cinematica_inversa_roll.get())
-
-        radians_list_feed = [math.radians(deg) for deg in feed_joint]
-
-        q = calcular_cinematica_inversa(valores_joint, radians_list_feed[:4])
-
-        enviar_joint_q = [math.degrees(rad) for rad in q]
-
-        print(enviar_joint_q)
-        if self.global_state['connect']:
-            self.client_move.JointMovJ(float(enviar_joint_q[0]), float(enviar_joint_q[1]), float(enviar_joint_q[2]),
-                                       float(enviar_joint_q[3]))
-            self.client_move.Sync()
 
     def update_dobot_frame(self, positions):
         # Borra la visualización anterior
