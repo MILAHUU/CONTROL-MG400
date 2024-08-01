@@ -417,107 +417,107 @@ class App(customtkinter.CTk):
         #Botones de tab Inversa
         #Botones J1,J2,J3...
         button_1I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[0][0], command=lambda: self.move_jog(text_list[0][0], "inversa"), width=80)
-        self.set_button_bind(button_1I, text_list[0][0], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_1I, text_list[0][0], rely=0.2, x=100)
 
         button_2I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[0][1], command=lambda: self.move_jog(text_list[0][1], "inversa"), width=80)
-        self.set_button_bind(button_2I, text_list[0][1], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_2I, text_list[0][1], rely=0.2, x=100)
 
         button_3I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[0][2], command=lambda: self.move_jog(text_list[0][2], "inversa"), width=80)
-        self.set_button_bind(button_3I, text_list[0][2], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_3I, text_list[0][2], rely=0.2, x=100)
 
         button_4I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[0][3], command=lambda: self.move_jog(text_list[0][3], "inversa"), width=80 )
-        self.set_button_bind(button_4I, text_list[0][3], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_4I, text_list[0][3], rely=0.2, x=100)
 
         button_5I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[2][0], command=lambda: self.move_jog(text_list[2][0], "inversa"), width=80)
-        self.set_button_bind(button_5I, text_list[2][0], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_5I, text_list[2][0], rely=0.2, x=100)
 
         button_6I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[2][1], command=lambda: self.move_jog(text_list[2][1], "inversa"), width=80)
-        self.set_button_bind(button_6I, text_list[2][1], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_6I, text_list[2][1], rely=0.2, x=100)
 
         button_7I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[2][2], command=lambda: self.move_jog(text_list[2][2], "inversa"), width=80)
-        self.set_button_bind(button_7I, text_list[2][2], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_7I, text_list[2][2], rely=0.2, x=100)
 
         button_8I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_list[2][3], command=lambda: self.move_jog(text_list[2][3], "inversa"), width=80)
-        self.set_button_bind(button_8I, text_list[2][3], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_8I, text_list[2][3], rely=0.2, x=100)
 
         #Botones X,Y,Z...
 
         button_9I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[0][0], command=lambda: self.move_jog(text_lists[0][0], "inversa"), width=80 )
-        self.set_button_bind(button_9I, text_lists[0][0], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_9I, text_lists[0][0], rely=0.2, x=100)
         
         button_10I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[0][1], command=lambda: self.move_jog(text_lists[0][1], "inversa"), width=80 )
-        self.set_button_bind(button_10I, text_lists[0][1], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_10I, text_lists[0][1], rely=0.2, x=100)
 
         button_11I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[0][2], command=lambda: self.move_jog(text_lists[0][2], "inversa"), width=80 )
-        self.set_button_bind(button_11I, text_lists[0][2], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_11I, text_lists[0][2], rely=0.2, x=100)
 
         button_12I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[0][3], command=lambda: self.move_jog(text_lists[0][3], "inversa"), width=80 )
-        self.set_button_bind(button_12I, text_lists[0][3], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_12I, text_lists[0][3], rely=0.2, x=100)
 
         button_13I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[2][0], command=lambda: self.move_jog(text_lists[2][0], "inversa"), width=80 )
-        self.set_button_bind(button_13I, text_lists[2][0], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_13I, text_lists[2][0], rely=0.2, x=100)
 
         button_14I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[2][1], command=lambda: self.move_jog(text_lists[2][1], "inversa"), width=80 )
-        self.set_button_bind(button_14I, text_lists[2][1], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_14I, text_lists[2][1], rely=0.2, x=100)
 
         button_15I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[2][2], command=lambda: self.move_jog(text_lists[2][2], "inversa"), width=80 )
-        self.set_button_bind(button_15I, text_lists[2][2], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_15I, text_lists[2][2], rely=0.2, x=100)
 
         button_16I = customtkinter.CTkButton(self.tabview.tab("C. Inversa"), text=text_lists[2][3], command=lambda: self.move_jog(text_lists[2][3], "inversa"), width=80 )
-        self.set_button_bind(button_16I, text_lists[2][3], rely=0.2, x=100,  mode="inversa")
+        self.set_button_bind(button_16I, text_lists[2][3], rely=0.2, x=100)
 
         
         #Botones de tab Directa
         #Botones J1,J2,J3...
         button_1D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[0][0], command=lambda: self.move_jog(text_list[0][0], "directa"), width=80)
-        self.set_button_bind(button_1D, text_list[0][0], rely=0.2, x=100,  mode="directa")
+        self.set_button_bind(button_1D, text_list[0][0], rely=0.2, x=100)
 
         button_2D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[0][1], command=lambda: self.move_jog(text_list[0][1], "directa"), width=80)
-        self.set_button_bind(button_2D, text_list[0][1], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_2D, text_list[0][1], rely=0.2, x=100)
 
         button_3D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[0][2], command=lambda: self.move_jog(text_list[0][2], "directa"), width=80)
-        self.set_button_bind(button_3D, text_list[0][2], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_3D, text_list[0][2], rely=0.2, x=100)
 
         button_4D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[0][3], command=lambda: self.move_jog(text_list[0][3], "directa"), width=80 )
-        self.set_button_bind(button_4D, text_list[0][3], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_4D, text_list[0][3], rely=0.2, x=100)
 
         button_5D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[2][0], command=lambda: self.move_jog(text_list[2][0], "directa"), width=80)
-        self.set_button_bind(button_5D, text_list[2][0], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_5D, text_list[2][0], rely=0.2, x=100)
 
         button_6D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[2][1], command=lambda: self.move_jog(text_list[2][1], "directa"), width=80)
-        self.set_button_bind(button_6D, text_list[2][1], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_6D, text_list[2][1], rely=0.2, x=100)
 
         button_7D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[2][2], command=lambda: self.move_jog(text_list[2][2], "directa"), width=80)
-        self.set_button_bind(button_7D, text_list[2][2], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_7D, text_list[2][2], rely=0.2, x=100)
 
         button_8D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_list[2][3], command=lambda: self.move_jog(text_list[2][3], "directa"), width=80)
-        self.set_button_bind(button_8D, text_list[2][3], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_8D, text_list[2][3], rely=0.2, x=100)
         
         #Botones X,Y,Z...
         
         button_9D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[0][0], command=lambda: self.move_jog(text_lists[0][0], "directa"), width=80 )
-        self.set_button_bind(button_9D, text_lists[0][0], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_9D, text_lists[0][0], rely=0.2, x=100)
         
         button_10D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[0][1], command=lambda: self.move_jog(text_lists[0][1], "directa"), width=80 )
-        self.set_button_bind(button_10D, text_lists[0][1], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_10D, text_lists[0][1], rely=0.2, x=100)
 
         button_11D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[0][2], command=lambda: self.move_jog(text_lists[0][2], "directa"), width=80 )
-        self.set_button_bind(button_11D, text_lists[0][2], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_11D, text_lists[0][2], rely=0.2, x=100)
 
         button_12D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[0][3], command=lambda: self.move_jog(text_lists[0][3], "directa"), width=80 )
-        self.set_button_bind(button_12D, text_lists[0][3], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_12D, text_lists[0][3], rely=0.2, x=100)
 
         button_13D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[2][0], command=lambda: self.move_jog(text_lists[2][0], "directa"), width=80 )
-        self.set_button_bind(button_13D, text_lists[2][0], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_13D, text_lists[2][0], rely=0.2, x=100)
 
         button_14D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[2][1], command=lambda: self.move_jog(text_lists[2][1], "directa"), width=80 )
-        self.set_button_bind(button_14D, text_lists[2][1], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_14D, text_lists[2][1], rely=0.2, x=100)
 
         button_15D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[2][2], command=lambda: self.move_jog(text_lists[2][2], "directa"), width=80 )
-        self.set_button_bind(button_15D, text_lists[2][2], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_15D, text_lists[2][2], rely=0.2, x=100)
 
         button_16D = customtkinter.CTkButton(self.tabview.tab("C. Directa"), text=text_lists[2][3], command=lambda: self.move_jog(text_lists[2][3], "directa"), width=80 )
-        self.set_button_bind(button_16D, text_lists[2][3], rely=0.2, x=100, mode="directa")
+        self.set_button_bind(button_16D, text_lists[2][3], rely=0.2, x=100)
         
 
         # Colocación del botón usando place o grid según tu preferencia
@@ -586,7 +586,6 @@ class App(customtkinter.CTk):
 
         # Insertar los valores en la base de datos
         self.conexion_bd.insert_directa(j1, j2, j3, j4, timestamp)
-        self.conexion_bd.insert_personalizado(f"J1: {j1}, J2: {j2}, J3: {j3}, J4: {j4}", timestamp)
 
         # Actualizar el feedback
         self.feed_j1.configure(text=f"{j1:.2f}")
@@ -619,7 +618,6 @@ class App(customtkinter.CTk):
 
         # Insertar los valores en la base de datos
         self.conexion_bd.insert_inversa(valores_joint[0], valores_joint[1], valores_joint[2], valores_joint[3], timestamp)
-        self.conexion_bd.insert_personalizado(f"X: {valores_joint[0]}, Y: {valores_joint[1]}, Z: {valores_joint[2]}, Roll: {valores_joint[3]}", timestamp)
         
         # Actualizar el feedback
         self.feed_x.configure(text=f"{valores_joint[0]:.2f}")
@@ -638,8 +636,8 @@ class App(customtkinter.CTk):
             json_data = json.load(fp)
         return json_data
     
-    def set_button_bind(self, button, text, rely, x, mode):
-        button.bind("<ButtonPress-1>", lambda event: self.move_jog(text=text, mode=mode))
+    def set_button_bind(self, button, text, rely, x, **kwargs):
+        button.bind("<ButtonPress-1>", lambda event: self.move_jog(text=text, mode=kwargs.get("mode")))
         button.bind("<ButtonRelease-1>", self.move_stop)
         button.place(rely=rely, x=x)
 
@@ -653,43 +651,32 @@ class App(customtkinter.CTk):
     def move_jog(self, text, mode):
         if self.global_state["connect"]:
             self.client_move.MoveJog(text)
-
-            # Obtener el timestamp actual
-            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
-            #crear el texto del movimiento para la tabla movimientos_personalizados
-            movement = f"{mode} - {text}"
-            
-            #insertar el movimiento en la tabla movimientos_personalizados
-            self.conexion_bd.insert_personalizado(movement, timestamp)
-            
-            #obtener y actualizar el feedback solo si es necesario
-            if mode == "directa":
-                # Obtener los valores de cinemática directa (asumiendo que están en variables)
-                j1 = float(self.cinematica_directa_joint1.get())
-                j2 = float(self.cinematica_directa_joint2.get())
-                j3 = float(self.cinematica_directa_joint3.get())
-                j4 = float(self.cinematica_directa_joint4.get())
-                
-                # Actualizar el feedback
-                self.feed_j1.configure(text=f"{j1:.2f}")
-                self.feed_j2.configure(text=f"{j2:.2f}")
-                self.feed_j3.configure(text=f"{j3:.2f}")
-                self.feed_j4.configure(text=f"{j4:.2f}")
+        # Obtener el timestamp actual
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+        # Obtener los valores actuales del feedback
+        x = self.feed_x.cget("text")
+        y = self.feed_y.cget("text")
+        z = self.feed_z.cget("text")
+        roll = self.feed_roll.cget("text")
+        j1 = self.feed_j1.cget("text")
+        j2 = self.feed_j2.cget("text")
+        j3 = self.feed_j3.cget("text")
+        j4 = self.feed_j4.cget("text")
+        
+        # Inicializar la variable movimiento
+        movimiento = ""
 
-            elif mode == "inversa":
-                # Obtener los valores de cinemática inversa (asumiendo que están en variables)
-                x = float(self.cinematica_inversa_x.get())
-                y = float(self.cinematica_inversa_y.get())
-                z = float(self.cinematica_inversa_z.get())
-                roll = float(self.cinematica_inversa_roll.get())
-                
-                # Actualizar el feedback
-                self.feed_x.configure(text=f"{x:.2f}")
-                self.feed_y.configure(text=f"{y:.2f}")
-                self.feed_z.configure(text=f"{z:.2f}")
-                self.feed_roll.configure(text=f"{roll:.2f}")
+        # Crear una descripción del movimiento basado en el modo
+        if mode == "inversa":
+            movimiento = f"X: {x}, Y: {y}, Z: {z}, Roll: {roll}"
+        elif mode == "directa":
+            movimiento = f"J1: {j1}, J2: {j2}, J3: {j3}, J4: {j4}"
+
+        # Insertar los valores en la base de datos
+        self.conexion_bd.insert_personalizado(movimiento, timestamp)
+
 
 
     def move_stop(self, event):
