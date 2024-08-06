@@ -257,14 +257,14 @@ class App(customtkinter.CTk):
 
         label_1_I = customtkinter.CTkLabel(self.tabview.tab("C. Inversa"), text=labels[0], anchor="w")
         label_1_I.grid(row=0, column=1, padx=(10, 0), pady=(10, 0), sticky="ew")
-        self.cinematica_inversa_x = customtkinter.StringVar(self.tabview.tab("C. Inversa"), value="158")
+        self.cinematica_inversa_x = customtkinter.StringVar(self.tabview.tab("C. Inversa"), value="-158")
         entry_1_I = customtkinter.CTkEntry(self.tabview.tab("C. Inversa"), textvariable=self.cinematica_inversa_x,
                                            justify="center")
         entry_1_I.grid(row=1, column=1, padx=(10, 0), pady=(5, 0), sticky="ew")
 
         label_2_I = customtkinter.CTkLabel(self.tabview.tab("C. Inversa"), text=labels[1], anchor="w")
         label_2_I.grid(row=0, column=2, padx=(10, 0), pady=(10, 0), sticky="ew")
-        self.cinematica_inversa_y = customtkinter.StringVar(self.tabview.tab("C. Inversa"), value="260")
+        self.cinematica_inversa_y = customtkinter.StringVar(self.tabview.tab("C. Inversa"), value="-260")
         entry_2_I = customtkinter.CTkEntry(self.tabview.tab("C. Inversa"), textvariable=self.cinematica_inversa_y,
                                            justify="center")
         entry_2_I.grid(row=1, column=2, padx=(10, 0), pady=(5, 0), sticky="ew")
@@ -278,7 +278,7 @@ class App(customtkinter.CTk):
 
         label_4_I = customtkinter.CTkLabel(self.tabview.tab("C. Inversa"), text=labels[3], anchor="w")
         label_4_I.grid(row=2, column=2, padx=(10, 0), pady=(10, 0), sticky="ew")
-        self.cinematica_inversa_roll = customtkinter.StringVar(self.tabview.tab("C. Inversa"), value="126")
+        self.cinematica_inversa_roll = customtkinter.StringVar(self.tabview.tab("C. Inversa"), value="-126")
         entry_4_I = customtkinter.CTkEntry(self.tabview.tab("C. Inversa"), textvariable=self.cinematica_inversa_roll,
                                            justify="center")
         entry_4_I.grid(row=3, column=2, padx=(10, 0), pady=(5, 0), sticky="ew")
