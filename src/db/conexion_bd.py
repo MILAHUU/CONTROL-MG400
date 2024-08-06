@@ -32,14 +32,6 @@ class Database:
         except mysql.connector.Error as err:
             print(f"Error al insertar en la tabla inversa: {err}")
 
-    def insert_personalizado(self, movement, timestamp):
-        try:
-            sql = "INSERT INTO movimientos_personalizados (movimiento, timestamp) VALUES (%s, %s)"
-            values = (movement, timestamp)
-            self.cursor.execute(sql, values)
-            self.connection.commit()
-        except mysql.connector.Error as err:
-            print(f"Error al insertar en la tabla movimientos_personalizados: {err}")
 
 
     def close(self):
