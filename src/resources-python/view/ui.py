@@ -140,24 +140,32 @@ class App(customtkinter.CTk):
         self.button_enable.place(relx=0.1, rely=0.30)
         self.global_state["enable"] = False
 
-         # Digital Outputs
-        self.label_digitial = customtkinter.CTkLabel(self.sidebar_frame, text="Digital Outputs:", anchor="w", 
-                                                     font=customtkinter.CTkFont(family="Roboto", size=12))
-        self.label_digitial.place(relx=0.1, rely=0.37)
+          # Digital Outputs
+        self.label_digital = customtkinter.CTkLabel(
+            self.sidebar_frame, text="Digital Outputs:", anchor="w", 
+            font=customtkinter.CTkFont(family="Roboto", size=12))
+        self.label_digital.place(relx=0.1, rely=0.37)
         
-        i_value = customtkinter.IntVar(self.sidebar_frame, value=1)
-        self.entry_index = customtkinter.CTkEntry(self.sidebar_frame, width=30, textvariable=i_value, placeholder_text="1")
+        # Entry with Integer Validation
+        self.i_value = tk.StringVar(value="1")
+        self.entry_index = customtkinter.CTkEntry(
+            self.sidebar_frame, width=30, textvariable=self.i_value, placeholder_text="1")
         self.entry_index.place(relx=0.35, rely=0.37)
 
-        self.label_status = customtkinter.CTkLabel(self.sidebar_frame, text="Status:", anchor="w", font=customtkinter.CTkFont(family="Roboto", size=12))
+        # Bind validation to the entry widget
+        self.entry_index.bind("<KeyRelease>", self.validate_entry)
+
+        self.label_status = customtkinter.CTkLabel(
+            self.sidebar_frame, text="Status:", anchor="w", font=customtkinter.CTkFont(family="Roboto", size=12))
         self.label_status.place(relx=0.45, rely=0.37)
 
         self.combo_status = customtkinter.CTkComboBox(
-        self.sidebar_frame, width=55, values=["On", "Off"])
+            self.sidebar_frame, width=55, values=["On", "Off"])
         self.combo_status.set("On")
         self.combo_status.place(relx=0.58, rely=0.37)
 
-        self.confirm_button = customtkinter.CTkButton(self.sidebar_frame, text="Confirm", command=self.confirm_do, width=70)
+        self.confirm_button = customtkinter.CTkButton(
+            self.sidebar_frame, text="Confirm", command=self.confirm_do, width=70)
         self.confirm_button.place(relx=0.75, rely=0.37)
 
         # Entry Speed Ratio
@@ -571,6 +579,17 @@ class App(customtkinter.CTk):
 
         
         # Funciones
+    def validate_entry(self, event):
+        value = self.i_value.get()
+        if value.isdigit() or value == "":
+            # Value is either a number or empty, so it's valid
+            # You can also add any additional validation if needed
+            pass
+        else:
+            # Clear invalid input
+            self.i_value.set("1")  # Set default value or any valid integer
+
+
     def joint_movj(self):
         # Obtener los valores de las entradas
         j1 = float(self.cinematica_directa_joint1.get())
